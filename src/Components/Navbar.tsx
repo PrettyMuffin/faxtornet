@@ -1,10 +1,10 @@
-import { NavLink, NavLinkProps } from "react-router-dom";
-import { useContext, useState } from "react";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import logo from "../assets/images/Logo.png";
 type Props = {};
 
 function Navbar({}: Props) {
-  const [activeLink, setActiveLink] = useState("");
+  const [activeLink, setActiveLink] = useState("home");
 
   function handleClick(link: string) {
     setActiveLink(link);

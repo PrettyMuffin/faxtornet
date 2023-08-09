@@ -1,4 +1,3 @@
-import React from "react";
 import Presentazione from "./sections/Presentazione";
 
 type Props = {};
