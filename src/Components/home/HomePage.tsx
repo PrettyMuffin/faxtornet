@@ -1,12 +1,16 @@
+import CaroselloOfferte from "./sections/CaroselloOfferte";
+import ChiSiamo from "./sections/ChiSiamo";
 import Presentazione from "./sections/Presentazione";
 
 type Props = {};
 
 function HomePage({}: Props) {
   return (
-    <section>
+    <main>
       <Presentazione />
-    </section>
+      <ChiSiamo />
+      <CaroselloOfferte />
+    </main>
   );
 }
 

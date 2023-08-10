@@ -3,7 +3,9 @@
 @import "./config";
 @import "./footer";
 @import "./navbar";
-@import "./pages/home";
+@import "./pages/home/presentazione";
+@import "./pages/home/chiSiamo";
+@import "./pages/home/carosello";
 
 * {
   margin: 0;
@@ -11,4 +13,9 @@
   box-sizing: border-box;
   color: $text-color;
   font-family: "Inter", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }

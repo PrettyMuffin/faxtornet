@@ -6,6 +6,7 @@
   width: 100vw;
   height: 10vh;
   background-color: white;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,6 +14,9 @@
 }
 .navbar img {
   height: 100%;
+}
+.navbar img:hover {
+  cursor: pointer;
 }
 .navbar .nav-links {
   height: 100%;
@@ -26,13 +30,219 @@
 .navbar .nav-links .link:hover {
   text-decoration: underline;
 }
-.navbar .nav-links .link:focus {
-  text-decoration: underline;
-  color: #dc3c4d;
-}
 .navbar .nav-links .selected {
   text-decoration: underline;
   color: #dc3c4d;
+}
+
+.presentazione-sect {
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+.presentazione-sect video {
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+.presentazione-sect .description {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 33%;
+  display: grid;
+  place-content: center;
+}
+.presentazione-sect .description * {
+  color: white;
+}
+.presentazione-sect .description h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+.presentazione-sect .description .bottoni {
+  display: flex;
+  gap: 1em;
+  margin-top: 2em;
+}
+.presentazione-sect .description .bottoni a,
+.presentazione-sect .description .bottoni button {
+  flex-basis: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 300px;
+  font-size: 1vw;
+}
+.presentazione-sect .description .bottoni a {
+  background: #dc3c4d;
+  padding: 0.5em 1em;
+  text-decoration: none;
+}
+.presentazione-sect .description .bottoni *:hover {
+  cursor: pointer;
+}
+
+.presentazione-sect::before {
+  content: "";
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.41);
+}
+
+.trattino {
+  margin-bottom: 3em;
+  height: 0.5vw;
+  width: 3vw;
+  background-color: #dc3c4d;
+}
+
+.whatsapp-button {
+  gap: 0.5vw;
+  background-color: #33b045;
+  border: none;
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 1vw;
+}
+
+.whatsapp-button:hover {
+  cursor: pointer;
+}
+
+.chi-siamo-sect {
+  background-color: #f7f7f7;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.chi-siamo-sect .content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: -moz-max-content;
+  height: max-content;
+  justify-content: space-evenly;
+}
+.chi-siamo-sect .content-wrapper .content {
+  flex-basis: 26%;
+}
+.chi-siamo-sect .content-wrapper .content h1 {
+  font-size: 3em;
+  margin-bottom: 0.3em;
+}
+.chi-siamo-sect .content-wrapper .content p {
+  font-size: 1.25em;
+}
+.chi-siamo-sect .content-wrapper .content .stats {
+  display: flex;
+  align-items: center;
+  gap: 7.4375em;
+  margin-top: 1.25em;
+}
+.chi-siamo-sect .content-wrapper .content .stats h1 {
+  font-weight: normal;
+  font-size: 4em;
+  color: #dc3c4d;
+}
+.chi-siamo-sect .content-wrapper .content .stats p {
+  font-size: 1.125em;
+  text-align: center;
+}
+.chi-siamo-sect .content-wrapper .qr-card {
+  width: -moz-min-content;
+  width: min-content;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  align-items: center;
+  padding: 24px 50px;
+  transition: all ease-out 0.2s;
+}
+.chi-siamo-sect .content-wrapper .qr-card img {
+  width: 270px;
+}
+.chi-siamo-sect .content-wrapper .qr-card p {
+  text-align: center;
+  font-size: 20px;
+}
+.chi-siamo-sect .content-wrapper .qr-card:hover {
+  transform: translateY(-20px);
+}
+
+.sect-carosello-offerte {
+  height: 100vh;
+  margin-top: 6em;
+}
+.sect-carosello-offerte header {
+  text-align: center;
+}
+.sect-carosello-offerte header .trattino {
+  margin: 0 auto;
+  margin-bottom: 3em;
+}
+.sect-carosello-offerte header h1 {
+  font-size: 3em;
+}
+.sect-carosello-offerte .carosello-elemento {
+  margin: 0 3em;
+  display: grid;
+  place-content: center;
+  max-width: 500px;
+}
+.sect-carosello-offerte img {
+  width: 100%;
+  height: 220px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px 25px 0 0;
+}
+.sect-carosello-offerte .offerta-card {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+.sect-carosello-offerte .offerta-card h2 {
+  font-weight: 500;
+  font-size: 1.5em;
+}
+.sect-carosello-offerte .offerta-card .content {
+  background-color: #f7f7f7;
+  border-radius: 0 0 25px 25px;
+  padding: 1.0625em 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.0625em;
+}
+.sect-carosello-offerte .offerta-card .content p {
+  line-height: 25px;
+}
+
+.custom-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #dddddd;
+  border: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.custom-dot.active {
+  background-color: #dc3c4d;
 }
 
 * {
@@ -41,4 +251,9 @@
   box-sizing: border-box;
   color: #222226;
   font-family: "Inter", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }/*# sourceMappingURL=main.css.map */

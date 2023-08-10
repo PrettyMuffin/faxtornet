@@ -6,6 +6,7 @@
   width: 100vw;
   height: 10vh;
   background-color: white;
+  z-index: 100;
 
   display: flex;
   align-items: center;
@@ -15,6 +16,10 @@
 
   img {
     height: 100%;
+  }
+
+  img:hover {
+    cursor: pointer;
   }
 
   .nav-links {
@@ -30,11 +35,6 @@
 
     .link:hover {
       text-decoration: underline;
-    }
-
-    .link:focus {
-      text-decoration: underline;
-      color: $red-faxtornet;
     }
 
     .selected {

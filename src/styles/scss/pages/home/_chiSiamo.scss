@@ -1,0 +1,65 @@
+.chi-siamo-sect {
+  background-color: $gray-bg;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    height: max-content;
+    justify-content: space-evenly;
+
+    .content {
+      flex-basis: 26%;
+      h1 {
+        font-size: 3em;
+        margin-bottom: 0.3em;
+      }
+
+      p {
+        font-size: 1.25em;
+      }
+
+      .stats {
+        display: flex;
+        align-items: center;
+        gap: 7.4375em;
+        margin-top: 1.25em;
+        h1 {
+          font-weight: normal;
+          font-size: 4em;
+          color: $red-faxtornet;
+        }
+        p {
+          font-size: 1.125em;
+          text-align: center;
+        }
+      }
+    }
+
+    .qr-card {
+      width: min-content;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 25px;
+      align-items: center;
+      padding: 24px 50px;
+      img {
+        width: 270px;
+      }
+      p {
+        text-align: center;
+        font-size: 20px;
+      }
+      transition: all ease-out 0.2s;
+    }
+
+    .qr-card:hover {
+      transform: translateY(-20px);
+    }
+  }
+}

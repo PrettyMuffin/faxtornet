@@ -11,7 +11,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <header>
+        <Navbar />
+      </header>
       <Routes>
         <Route path="/" Component={HomePage} />
         <Route path="/info" Component={Info} />

@@ -1,18 +1,26 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import logo from "../assets/images/Logo.png";
 type Props = {};
 
 function Navbar({}: Props) {
   const [activeLink, setActiveLink] = useState("home");
+  const navigator = useNavigate();
 
   function handleClick(link: string) {
     setActiveLink(link);
   }
 
+  function TornaAllaHome() {
+    if (activeLink !== "home") {
+      setActiveLink("home");
+      navigator("/");
+    }
+  }
+
   return (
     <nav className="navbar">
-      <img src={logo} />
+      <img src={logo} onClick={TornaAllaHome} />
       <section className="nav-links">
         <NavLink
           to={"/"}
