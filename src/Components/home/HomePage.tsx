@@ -1,6 +1,7 @@
 import CaroselloOfferte from "./sections/CaroselloOfferte";
 import ChiSiamo from "./sections/ChiSiamo";
 import Presentazione from "./sections/Presentazione";
+import WhyNoi from "./sections/WhyNoi";
 
 type Props = {};
 
@@ -10,6 +11,7 @@ function HomePage({}: Props) {
       <Presentazione />
       <ChiSiamo />
       <CaroselloOfferte />
+      <WhyNoi />
     </main>
   );
 }

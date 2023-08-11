@@ -25,7 +25,7 @@ function Descrizione() {
         Benvenuto nel futuro, al sicuro nelle mani di esperti.
       </p>
       <section className="bottoni">
-        <a href="#">Servizi</a>
+        <a href="#servizi">Servizi</a>
         <WhatsappButton />
       </section>
     </section>

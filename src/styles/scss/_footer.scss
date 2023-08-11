@@ -1,0 +1,46 @@
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40vh;
+  background-color: $gray-bg;
+  img {
+    width: 100%;
+    margin-bottom: 1.3em;
+  }
+
+  .footer-logo,
+  .footer-contatta {
+    flex-basis: 20%;
+  }
+
+  .footer-contatta {
+    .qr-container {
+      display: flex;
+      align-items: center;
+      gap: 0.4em;
+      p {
+        font-weight: 500;
+        font-size: 1.25em;
+        text-justify: distribute;
+      }
+    }
+    img {
+      width: 50%;
+    }
+  }
+
+  .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    .icon {
+      transition: all ease-out 0.2s;
+    }
+    .icon:hover {
+      transform: translateY(-5px);
+      fill: $red-faxtornet;
+    }
+  }
+}

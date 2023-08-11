@@ -6,6 +6,12 @@
 @import "./pages/home/presentazione";
 @import "./pages/home/chiSiamo";
 @import "./pages/home/carosello";
+@import "./pages/home/whyNoi";
+
+:root {
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
@@ -17,5 +23,4 @@
 
 body {
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }

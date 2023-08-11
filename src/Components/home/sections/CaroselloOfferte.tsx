@@ -12,7 +12,7 @@ type Props = {};
 
 function CaroselloOfferte({}: Props) {
   return (
-    <section className="sect-carosello-offerte">
+    <section className="sect-carosello-offerte" id="servizi">
       <header>
         <div className="trattino"></div>
         <h1>Cosa Offriamo</h1>
@@ -101,21 +101,16 @@ function Carosello() {
 
   return (
     <Carousel
-      swipeable={false}
-      draggable={false}
+      arrows={false}
       showDots={true}
       responsive={responsive}
-      infinite={true}
       autoPlay={true}
       autoPlaySpeed={3000}
-      keyBoardControl={true}
       customTransition="all 1s ease"
       transitionDuration={1500}
-      arrows={false}
-      renderButtonGroupOutside={true}
-      rewindWithAnimation={true}
       customDot={<CustomDot />}
       itemClass="carosello-elemento"
+      className="carosello"
     >
       {items.map((el) => {
         return (
