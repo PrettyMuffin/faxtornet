@@ -1,31 +1,7 @@
-import serviziAffidabili from "../../../assets/images/handshake.png";
-import qualificato from "../../../assets/images/qualificato.png";
-import onesta from "../../../assets/images/rating.png";
-
+import { whyNoiItems } from "../../../Data";
 import { WhyNoiCard } from "../../../Models";
 
 function WhyNoi() {
-  const items: WhyNoiCard[] = [
-    {
-      imgPath: serviziAffidabili,
-      title: "Servizi Affidabili",
-      descrizione:
-        "Soddisfare il cliente è la nostra priorità numero 1.Se non sei soddisfatto non paghi!",
-    },
-    {
-      imgPath: qualificato,
-      title: "Personale Qualificato",
-      descrizione:
-        "Tutti i nostri tecnici, qui a Faxtornet, hanno anni di esperienza e portano a termine il lavoro.",
-    },
-    {
-      imgPath: onesta,
-      title: "Onestà Con Il Cliente",
-      descrizione:
-        "Per noi l’onestà e la chiarezza con il cliente è fondamentale, se un problema non è risolvibile da noi, non vi faremo perdere tempo.",
-    },
-  ];
-
   return (
     <section className="why-us" id="why-us">
       <header>
@@ -37,7 +13,7 @@ function WhyNoi() {
         </p>
       </header>
       <section className="card-container">
-        {items.map((el) => {
+        {whyNoiItems.map((el) => {
           return (
             <WhyNoiCardPage
               imgPath={el.imgPath}

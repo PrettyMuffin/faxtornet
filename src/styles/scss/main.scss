@@ -1,12 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 @import "./config";
-@import "./footer";
-@import "./navbar";
-@import "./pages/home/presentazione";
-@import "./pages/home/chiSiamo";
-@import "./pages/home/carosello";
-@import "./pages/home/whyNoi";
+
+html {
+  font-size: 16px;
+}
 
 :root {
   text-rendering: optimizeLegibility;
@@ -24,3 +21,9 @@
 body {
   overflow-x: hidden;
 }
+
+@import "./navbar";
+@import "./pages/home/home";
+@import "./footer";
+
+@import "./responsive/responsive";

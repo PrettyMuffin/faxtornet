@@ -1,10 +1,13 @@
-import { CaroselloItem, ElementoNavigazione } from "./Models";
+import { CaroselloItem, ElementoNavigazione, WhyNoiCard } from "./Models";
 
 import mac from "./assets/images/mac.jpg";
 import assemblaggio from "./assets/images/assemblaggio pc.jpg";
 import pastaTermica from "./assets/images/pasta termica.jpg";
 import os from "./assets/images/os download.jpg";
 import cambioSsd from "./assets/images/cambio ssd.jpg";
+import serviziAffidabili from "./assets/images/handshake.png";
+import qualificato from "./assets/images/qualificato.png";
+import onesta from "./assets/images/rating.png";
 
 // Navigazione nel footer
 export const homeLinks: ElementoNavigazione[] = [
@@ -59,5 +62,27 @@ export const caroselloItems: CaroselloItem[] = [
     title: "Migrazione Su Dischi A Stato Solido Mantenendo Propri Dati",
     description:
       "Nel caso vi si sia rotto un HDD o SSD non c’è problema, i nostri tecnici sono in grado di recuperare i dati e inserirli in una nuova unità di salvataggio dati.",
+  },
+];
+
+// Why Noi - Home
+export const whyNoiItems: WhyNoiCard[] = [
+  {
+    imgPath: serviziAffidabili,
+    title: "Servizi Affidabili",
+    descrizione:
+      "Soddisfare il cliente è la nostra priorità numero 1.Se non sei soddisfatto non paghi!",
+  },
+  {
+    imgPath: qualificato,
+    title: "Personale Qualificato",
+    descrizione:
+      "Tutti i nostri tecnici, qui a Faxtornet, hanno anni di esperienza e portano a termine il lavoro.",
+  },
+  {
+    imgPath: onesta,
+    title: "Onestà Con Il Cliente",
+    descrizione:
+      "Per noi l’onestà e la chiarezza con il cliente è fondamentale, se un problema non è risolvibile da noi, non vi faremo perdere tempo.",
   },
 ];

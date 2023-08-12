@@ -29,7 +29,7 @@ footer {
       gap: 0.4em;
       p {
         font-weight: 500;
-        font-size: 1.25em;
+        font-size: 1.25rem;
         text-justify: distribute;
       }
     }
@@ -58,14 +58,14 @@ footer {
     align-items: center;
     gap: 10%;
     h1 {
-      font-size: 1.7em;
+      font-size: 1.7rem;
     }
 
     .link-sezioni {
       list-style: none;
       a {
         color: $red-faxtornet;
-        font-size: 1.125em;
+        font-size: 1.125rem;
       }
       display: flex;
       flex-direction: column;

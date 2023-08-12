@@ -1,0 +1,102 @@
+@media (max-width: 425px) {
+  html {
+    font-size: 10px;
+  }
+
+  .trattino {
+    width: 13%;
+    height: 8px;
+  }
+
+  //! HOME
+  .presentazione-sect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .description {
+      width: 80%;
+      left: 10%;
+    }
+  }
+
+  .chi-siamo-sect {
+    .content-wrapper {
+      flex-direction: column;
+      justify-content: center;
+      gap: 5em;
+      height: fit-content;
+      width: 80%;
+      margin: 0 auto;
+      .content {
+        width: 100%;
+        .stats {
+          gap: 6em;
+        }
+      }
+      .qr-card {
+        padding: 2em 0.5em;
+        width: 100%;
+      }
+    }
+  }
+
+  .sect-carosello-offerte {
+    .offerta-card {
+      width: 100%;
+    }
+  }
+
+  .why-us {
+    margin-bottom: 3em;
+    height: fit-content;
+    header {
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      .trattino {
+        align-self: center;
+      }
+      p {
+        width: 100%;
+      }
+    }
+    .card-container {
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 4em;
+      flex-direction: column;
+      gap: 3em;
+    }
+  }
+
+  footer {
+    height: fit-content;
+    padding: 2em 0;
+    .items-wrapper {
+      flex-direction: column;
+      align-items: center;
+      gap: 3em;
+    }
+    .footer-logo,
+    .footer-contatta,
+    .footer-navigazione {
+      width: 50%;
+    }
+    .social-links {
+      .icon {
+        width: 70%;
+      }
+    }
+    .footer-navigazione {
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5em;
+      }
+      .link-sezioni {
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
