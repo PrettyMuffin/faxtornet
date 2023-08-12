@@ -2,11 +2,7 @@ import serviziAffidabili from "../../../assets/images/handshake.png";
 import qualificato from "../../../assets/images/qualificato.png";
 import onesta from "../../../assets/images/rating.png";
 
-type WhyNoiCard = {
-  imgPath: string;
-  title: string;
-  descrizione: string;
-};
+import { WhyNoiCard } from "../../../Models";
 
 function WhyNoi() {
   const items: WhyNoiCard[] = [
@@ -31,7 +27,7 @@ function WhyNoi() {
   ];
 
   return (
-    <section className="why-us">
+    <section className="why-us" id="why-us">
       <header>
         <div className="trattino"></div>
         <h1>Perché Scegliere Noi</h1>
@@ -43,7 +39,7 @@ function WhyNoi() {
       <section className="card-container">
         {items.map((el) => {
           return (
-            <WhyNoiCard
+            <WhyNoiCardPage
               imgPath={el.imgPath}
               title={el.title}
               descrizione={el.descrizione}
@@ -57,7 +53,7 @@ function WhyNoi() {
 
 export default WhyNoi;
 
-function WhyNoiCard({ imgPath, title, descrizione }: WhyNoiCard) {
+function WhyNoiCardPage({ imgPath, title, descrizione }: WhyNoiCard) {
   return (
     <section className="card">
       <img src={imgPath} alt="" />

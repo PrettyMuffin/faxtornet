@@ -1,8 +1,6 @@
 import qr from "../../../assets/images/qr.png";
 
-type Props = {};
-
-function ChiSiamo({}: Props) {
+function ChiSiamo() {
   return (
     <section className="chi-siamo-sect" id="chi-siamo">
       <div className="content-wrapper">

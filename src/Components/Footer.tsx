@@ -1,15 +1,25 @@
+//* Librerie
+import { useContext } from "react";
 import { BiLogoFacebook, BiLogoInstagram } from "react-icons/bi";
 import { SiGooglemaps } from "react-icons/si";
 
-import logo from "../assets/images/Logo.png";
+//* Dipendenze
+import { CurrentPageContext } from "../App";
+import { ElementoNavigazione } from "../Models";
+import { homeLinks, infoLinks } from "../Data";
+
+//* Immagini
 import qrCode from "../assets/images/qr.png";
+import logo from "../assets/images/Logo.png";
 
 function Footer() {
   return (
     <footer>
-      <Logo />
-      <Navigazione />
-      <Contatta />
+      <div className="items-wrapper">
+        <Logo />
+        <Navigazione />
+        <Contatta />
+      </div>
     </footer>
   );
 }
@@ -49,8 +59,27 @@ function Logo() {
 }
 
 function Navigazione() {
-  //TODO: In base alla pagina in cui ci troviamo, mostrare navigazione o meno
-  return <div></div>;
+  const { currentPage } = useContext(CurrentPageContext);
+
+  const elementiNavigazione: ElementoNavigazione[] =
+    currentPage === "home" ? homeLinks : infoLinks;
+
+  return currentPage === "home" || currentPage === "info" ? (
+    <section className="footer-navigazione">
+      <h1>Naviga</h1>
+      <ul className="link-sezioni">
+        {elementiNavigazione.map((el) => {
+          return (
+            <li>
+              <a href={`#${el.idRef}`}>{el.displayString}</a>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  ) : (
+    ""
+  );
 }
 
 function Contatta() {

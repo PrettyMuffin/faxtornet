@@ -1,58 +1,61 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import logo from "../assets/images/Logo.png";
-type Props = {};
+import { useContext } from "react";
+import { CurrentPageContext } from "../App";
 
-function Navbar({}: Props) {
-  const [activeLink, setActiveLink] = useState("home");
+import logo from "../assets/images/Logo.png";
+
+function Navbar() {
+  const { currentPage, setCurrentPage } = useContext(CurrentPageContext);
   const navigator = useNavigate();
 
   function handleClick(link: string) {
-    setActiveLink(link);
+    setCurrentPage && setCurrentPage(link);
   }
 
   function TornaAllaHome() {
-    if (activeLink !== "home") {
-      setActiveLink("home");
+    if (currentPage !== "home") {
+      setCurrentPage && setCurrentPage("home");
       navigator("/");
     }
   }
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" id="navbar">
       <img src={logo} onClick={TornaAllaHome} />
       <section className="nav-links">
         <NavLink
           to={"/"}
-          className={activeLink === "home" ? "link selected" : "link"}
+          className={currentPage === "home" ? "link selected" : "link"}
           onClick={() => handleClick("home")}
         >
           Home
         </NavLink>
         <NavLink
           to={"/info"}
-          className={activeLink === "info" ? "link selected" : "link"}
+          className={currentPage === "info" ? "link selected" : "link"}
           onClick={() => handleClick("info")}
         >
           Info
         </NavLink>
         <NavLink
           to={"/servizi"}
-          className={activeLink === "servizi" ? "link selected" : "link"}
+          className={currentPage === "servizi" ? "link selected" : "link"}
           onClick={() => handleClick("servizi")}
         >
           Servizi
         </NavLink>
         <NavLink
           to={"/news"}
-          className={activeLink === "news" ? "link selected" : "link"}
+          className={currentPage === "news" ? "link selected" : "link"}
           onClick={() => handleClick("news")}
         >
           News
         </NavLink>
         <NavLink
           to={"/ricondizionati"}
-          className={activeLink === "ricondizionati" ? "link selected" : "link"}
+          className={
+            currentPage === "ricondizionati" ? "link selected" : "link"
+          }
           onClick={() => handleClick("ricondizionati")}
         >
           Ricondizionati

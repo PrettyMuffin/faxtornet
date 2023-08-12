@@ -4,13 +4,21 @@ footer {
   align-items: center;
   height: 40vh;
   background-color: $gray-bg;
+
+  .items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
   img {
     width: 100%;
     margin-bottom: 1.3em;
   }
 
   .footer-logo,
-  .footer-contatta {
+  .footer-contatta,
+  .footer-navigazione {
     flex-basis: 20%;
   }
 
@@ -41,6 +49,27 @@ footer {
     .icon:hover {
       transform: translateY(-5px);
       fill: $red-faxtornet;
+    }
+  }
+
+  .footer-navigazione {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10%;
+    h1 {
+      font-size: 1.7em;
+    }
+
+    .link-sezioni {
+      list-style: none;
+      a {
+        color: $red-faxtornet;
+        font-size: 1.125em;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 0.625em;
     }
   }
 }

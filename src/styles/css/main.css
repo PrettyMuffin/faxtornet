@@ -6,12 +6,18 @@ footer {
   height: 40vh;
   background-color: #f7f7f7;
 }
+footer .items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
 footer img {
   width: 100%;
   margin-bottom: 1.3em;
 }
 footer .footer-logo,
-footer .footer-contatta {
+footer .footer-contatta,
+footer .footer-navigazione {
   flex-basis: 20%;
 }
 footer .footer-contatta .qr-container {
@@ -39,6 +45,25 @@ footer .social-links .icon {
 footer .social-links .icon:hover {
   transform: translateY(-5px);
   fill: #dc3c4d;
+}
+footer .footer-navigazione {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10%;
+}
+footer .footer-navigazione h1 {
+  font-size: 1.7em;
+}
+footer .footer-navigazione .link-sezioni {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625em;
+}
+footer .footer-navigazione .link-sezioni a {
+  color: #dc3c4d;
+  font-size: 1.125em;
 }
 
 .navbar {
@@ -333,6 +358,7 @@ footer .social-links .icon:hover {
 .why-us .card-container {
   margin-top: 4em;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .why-us .card-container .card {

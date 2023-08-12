@@ -2,11 +2,9 @@ import { FaWhatsapp } from "react-icons/fa";
 
 import video from "../../../assets/video/riparazioneMac.mp4";
 
-type Props = {};
-
-function Presentazione({}: Props) {
+function Presentazione() {
   return (
-    <section className="presentazione-sect">
+    <section className="presentazione-sect" id="presentazione">
       <video autoPlay muted loop src={video} />
       <Descrizione />
     </section>
