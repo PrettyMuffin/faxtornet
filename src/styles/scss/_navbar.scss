@@ -1,0 +1,45 @@
+.navbar {
+  // così quando scrollo verso il basso rimane in cima
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  background-color: white;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.5625em 5.5em 1.3125em 1.5em;
+
+  img {
+    height: 100%;
+  }
+
+  img:hover {
+    cursor: pointer;
+  }
+
+  .nav-links {
+    height: 100%;
+    display: flex;
+    align-items: end;
+    gap: 2em;
+    // background-color: aqua;
+
+    .link {
+      text-decoration: none;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+
+    .selected {
+      text-decoration: underline;
+      color: $red-faxtornet;
+    }
+  }
+}
