@@ -1,10 +1,37 @@
-@media (max-width: 768px) {
-  .navbar {
-    .nav-links {
-      display: none;
+@media (min-width: 426px) and (max-width: 768px) {
+  .why-us {
+    height: fit-content;
+  }
+  .chi-siamo-sect {
+    height: fit-content;
+    padding-block: 3em;
+    .content-wrapper {
+      width: 80%;
+      margin-inline: auto;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      .qr-card {
+        width: 60%;
+        // width: 100vw;
+      }
     }
   }
 }
 
-@media (min-width: 426px) and (max-width: 923px) {
+@media (min-width: 426px) and (max-width: 1024) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .chi-siamo-sect {
+    .content-wrapper {
+      .qr-card {
+        width: 30%;
+      }
+    }
+  }
 }

@@ -19,3 +19,8 @@ export type WhyNoiCard = {
   title: string;
   descrizione: string;
 };
+
+export type NavBar = {
+  currentPage: string;
+  handlePage: Function;
+};

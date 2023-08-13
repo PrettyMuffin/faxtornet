@@ -31,7 +31,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5625em 5.5em 1.3125em 1.5em;
+  padding: 0.5625em 0 1.3125em 1.5em;
 }
 .navbar img {
   height: 100%;
@@ -41,12 +41,14 @@ body {
 }
 .navbar .nav-links {
   height: 100%;
+  padding-right: 5.5em;
   display: flex;
   align-items: end;
   gap: 2em;
 }
 .navbar .nav-links .link {
   text-decoration: none;
+  font-size: 1.1rem;
 }
 .navbar .nav-links .link:hover {
   text-decoration: underline;
@@ -54,6 +56,56 @@ body {
 .navbar .nav-links .selected {
   text-decoration: underline;
   color: #dc3c4d;
+}
+
+.mobile-nav {
+  padding-right: 2em;
+}
+
+.mobile-nav-links {
+  height: 100vh;
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3em;
+  background-color: #222226;
+  width: 50%;
+  position: absolute;
+  right: 0;
+}
+.mobile-nav-links .link {
+  margin-inline: auto;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.mobile-nav-links .link .icon {
+  fill: white;
+}
+.mobile-nav-links .link:hover {
+  text-decoration: underline;
+}
+.mobile-nav-links .selected {
+  text-decoration: underline;
+  color: #dc3c4d;
+}
+
+.nav-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-out;
+}
+
+.slide-in {
+  transform: translateX(0);
 }
 
 .presentazione-sect {
@@ -119,8 +171,8 @@ body {
 
 .trattino {
   margin-bottom: 3em;
-  height: 0.5vw;
-  width: 3vw;
+  height: 0.5rem;
+  width: 3rem;
   background-color: #dc3c4d;
 }
 
@@ -179,8 +231,7 @@ body {
   text-align: center;
 }
 .chi-siamo-sect .content-wrapper .qr-card {
-  width: -moz-min-content;
-  width: min-content;
+  width: 20vw;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -188,7 +239,7 @@ body {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   align-items: center;
-  padding: 24px 50px;
+  padding: 2em 3em;
   transition: all ease-out 0.2s;
 }
 .chi-siamo-sect .content-wrapper .qr-card img {
@@ -236,10 +287,10 @@ body {
 }
 .sect-carosello-offerte .offerta-card {
   width: 70%;
-  max-width: 500px;
+  max-width: 450px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
-  min-height: 500px;
+  min-height: 550px;
   height: -moz-fit-content;
   height: fit-content;
   background-color: #f7f7f7;
@@ -309,7 +360,7 @@ body {
   text-align: center;
 }
 .why-us .card-container {
-  margin-top: 4em;
+  margin-block: 4em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -488,8 +539,45 @@ footer .footer-navigazione .link-sezioni a {
     font-size: 1.4rem;
   }
 }
-@media (max-width: 768px) {
-  .navbar .nav-links {
-    display: none;
+@media (min-width: 426px) and (max-width: 768px) {
+  .why-us {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .chi-siamo-sect {
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-block: 3em;
+  }
+  .chi-siamo-sect .content-wrapper {
+    width: 80%;
+    margin-inline: auto;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .chi-siamo-sect .content-wrapper .qr-card {
+    width: 60%;
+  }
+}
+@media (min-width: 426px) and (max-width: 1024) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .chi-siamo-sect .content-wrapper .qr-card {
+    width: 30%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .chi-siamo-sect .content-wrapper .qr-card {
+    width: 25%;
+  }
+}
+@media (min-width: 2000px) {
+  html {
+    font-size: 20px;
   }
 }/*# sourceMappingURL=main.css.map */

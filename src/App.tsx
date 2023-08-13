@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import Footer from "./Components/Footer";
-import Navbar from "./Components/Navbar";
+import NavbarRenderer from "./Components/NavbarRenderer";
 import HomePage from "./Components/home/HomePage";
 import Info from "./Components/info/Info";
 import News from "./Components/news/News";
@@ -24,7 +24,7 @@ function App() {
     <CurrentPageContext.Provider value={contextValue}>
       <BrowserRouter>
         <header>
-          <Navbar />
+          <NavbarRenderer />
         </header>
         <Routes>
           <Route path="/" Component={HomePage} />

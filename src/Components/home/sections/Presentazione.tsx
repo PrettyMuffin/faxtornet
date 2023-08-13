@@ -33,7 +33,7 @@ function Descrizione() {
 export function WhatsappButton() {
   return (
     <button className="whatsapp-button">
-      <FaWhatsapp size={"1.5vw"} /> Contattaci
+      <FaWhatsapp size={"1.5rem"} /> Contattaci
     </button>
   );
 }
