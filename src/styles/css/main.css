@@ -60,6 +60,7 @@ body {
 
 .mobile-nav {
   padding-right: 2em;
+  overflow-x: hidden;
 }
 
 .mobile-nav-links {
