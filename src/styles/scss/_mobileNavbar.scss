@@ -40,15 +40,14 @@
 }
 
 .nav-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
+  left: 100%;
   height: 100vh;
   width: 100%;
-  transform: translateX(100%);
-  transition: transform 0.5s ease-out;
+  transition: left 0.5s ease-out;
 }
 
 .slide-in {
-  transform: translateX(0);
+  left: 0;
 }

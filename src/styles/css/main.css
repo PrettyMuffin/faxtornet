@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 html {
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 :root {
@@ -14,10 +15,6 @@ html {
   box-sizing: border-box;
   color: #222226;
   font-family: "Inter", sans-serif;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 .navbar {
@@ -96,17 +93,16 @@ body {
 }
 
 .nav-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
+  left: 100%;
   height: 100vh;
   width: 100%;
-  transform: translateX(100%);
-  transition: transform 0.5s ease-out;
+  transition: left 0.5s ease-out;
 }
 
 .slide-in {
-  transform: translateX(0);
+  left: 0;
 }
 
 .presentazione-sect {

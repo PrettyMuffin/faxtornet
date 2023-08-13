@@ -3,6 +3,7 @@
 
 html {
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 :root {
@@ -16,10 +17,6 @@ html {
   box-sizing: border-box;
   color: $text-color;
   font-family: "Inter", sans-serif;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 @import "./navbar";
