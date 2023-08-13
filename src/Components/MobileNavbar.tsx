@@ -15,7 +15,11 @@ function MobileNavbar({ currentPage, handlePage }: NavBar) {
 
   return (
     <section className="mobile-nav">
-      <GiHamburgerMenu size={"2rem"} onClick={activateSlide} />
+      <GiHamburgerMenu
+        size={"3.5rem"}
+        onClick={activateSlide}
+        className={"hamburger"}
+      />
       <section className="nav-wrapper" ref={navRef} onClick={activateSlide}>
         <section className={`mobile-nav-links `}>
           <NavLink
