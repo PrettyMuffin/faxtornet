@@ -27,28 +27,40 @@ function MobileNavbar({ currentPage, handlePage }: NavBar) {
             className={currentPage === "home" ? "link selected" : "link"}
             onClick={() => handlePage("home")}
           >
-            <BiHome className={"icon"} /> Home
+            <BiHome
+              className={currentPage === "home" ? "icon selected" : "icon"}
+            />
+            Home
           </NavLink>
           <NavLink
             to={"/info"}
             className={currentPage === "info" ? "link selected" : "link"}
             onClick={() => handlePage("info")}
           >
-            <BiInfoCircle className={"icon"} /> Info
+            <BiInfoCircle
+              className={currentPage === "info" ? "icon selected" : "icon"}
+            />
+            Info
           </NavLink>
           <NavLink
             to={"/servizi"}
             className={currentPage === "servizi" ? "link selected" : "link"}
             onClick={() => handlePage("servizi")}
           >
-            <MdDesignServices className={"icon"} /> Servizi
+            <MdDesignServices
+              className={currentPage === "servizi" ? "icon selected" : "icon"}
+            />
+            Servizi
           </NavLink>
           <NavLink
             to={"/news"}
             className={currentPage === "news" ? "link selected" : "link"}
             onClick={() => handlePage("news")}
           >
-            <FaRegNewspaper className={"icon"} /> News
+            <FaRegNewspaper
+              className={currentPage === "news" ? "icon selected" : "icon"}
+            />
+            News
           </NavLink>
           <NavLink
             to={"/ricondizionati"}
@@ -57,7 +69,12 @@ function MobileNavbar({ currentPage, handlePage }: NavBar) {
             }
             onClick={() => handlePage("ricondizionati")}
           >
-            <MdAutorenew className={"icon"} /> Ricondizionati
+            <MdAutorenew
+              className={
+                currentPage === "ricondizionati" ? "icon selected" : "icon"
+              }
+            />{" "}
+            Ricondizionati
           </NavLink>
         </section>
       </section>

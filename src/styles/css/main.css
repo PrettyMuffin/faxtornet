@@ -62,7 +62,7 @@ html {
 
 .mobile-nav-links {
   height: 100vh;
-  font-size: large;
+  font-size: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -76,7 +76,7 @@ html {
   margin-inline: auto;
   text-decoration: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   display: flex;
   align-items: center;
   gap: 0.5em;
@@ -84,11 +84,13 @@ html {
 .mobile-nav-links .link .icon {
   fill: white;
 }
+.mobile-nav-links .link .icon.selected {
+  fill: #dc3c4d;
+}
 .mobile-nav-links .link:hover {
   text-decoration: underline;
 }
 .mobile-nav-links .selected {
-  text-decoration: underline;
   color: #dc3c4d;
 }
 
