@@ -29,41 +29,39 @@
     justify-content: center;
     height: 100%;
   }
+}
 
+.offerta-card {
   img {
     width: 100%;
     height: 220px;
     object-fit: cover;
     border-radius: 25px 25px 0 0;
   }
-
-  .offerta-card {
-    width: 70%;
-    max-width: 450px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    min-height: 550px;
-    height: fit-content;
-    background-color: $gray-bg;
-    transition: transform 0.2s ease-out;
-    h2 {
-      font-weight: 500;
-      font-size: 1.5rem;
-    }
-    .content {
-      padding: 1.0625em 27px;
-      display: flex;
-      flex-direction: column;
-      gap: 1.0625em;
-      p {
-        line-height: 25px;
-      }
+  width: 70%;
+  max-width: 450px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  min-height: 500px;
+  background-color: $gray-bg;
+  transition: transform 0.2s ease-out;
+  h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  .content {
+    padding: 1.0625em 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.0625em;
+    p {
+      line-height: 25px;
     }
   }
+}
 
-  .offerta-card:hover {
-    transform: translateY(-20px);
-  }
+.offerta-card:hover {
+  transform: translateY(-20px);
 }
 
 // Customizzo Carosello

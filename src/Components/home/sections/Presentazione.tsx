@@ -23,7 +23,9 @@ function Descrizione() {
         Benvenuto nel futuro, al sicuro nelle mani di esperti.
       </p>
       <section className="bottoni">
-        <a href="#servizi">Servizi</a>
+        <a className="link" href="#servizi">
+          Servizi
+        </a>
         <WhatsappButton />
       </section>
     </section>
@@ -31,9 +33,10 @@ function Descrizione() {
 }
 
 export function WhatsappButton() {
+  const WHATSAPP_LINK = "https://wa.me/message/JSWGP4IQ5LVWM1?src=qr";
   return (
-    <button className="whatsapp-button">
+    <a className="whatsapp-button" href={WHATSAPP_LINK}>
       <FaWhatsapp size={"1.5rem"} /> Contattaci
-    </button>
+    </a>
   );
 }

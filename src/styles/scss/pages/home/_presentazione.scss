@@ -36,8 +36,7 @@
       gap: 1em;
       margin-top: 2em;
 
-      a,
-      button {
+      a {
         flex-basis: 25%;
         display: flex;
         align-items: center;
@@ -46,7 +45,7 @@
         font-size: 1rem;
       }
 
-      a {
+      .link {
         background: $red-faxtornet;
 
         padding: 0.5em 1em;
@@ -76,6 +75,7 @@
 }
 
 .whatsapp-button {
+  text-decoration: none;
   gap: 0.5vw;
   background-color: $whatsapp-green;
   border: none;
@@ -85,6 +85,10 @@
   justify-content: center;
   border-radius: 10px;
   font-size: 1rem;
+}
+
+.whatsapp-button:active {
+  text-decoration: none;
 }
 
 .whatsapp-button:hover {

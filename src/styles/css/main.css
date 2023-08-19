@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.page-section {
+  min-height: 100vh;
+}
+
 html {
   font-size: 16px;
   overflow-x: hidden;
@@ -15,6 +19,17 @@ html {
   box-sizing: border-box;
   color: #222226;
   font-family: "Inter", sans-serif;
+}
+
+.header-link {
+  font-size: 0.9375rem;
+  letter-spacing: 0.09375rem;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  align-self: flex-start;
+}
+.header-link :is(a) {
+  text-decoration: none;
 }
 
 .navbar {
@@ -142,8 +157,7 @@ html {
   gap: 1em;
   margin-top: 2em;
 }
-.presentazione-sect .description .bottoni a,
-.presentazione-sect .description .bottoni button {
+.presentazione-sect .description .bottoni a {
   flex-basis: 25%;
   display: flex;
   align-items: center;
@@ -151,7 +165,7 @@ html {
   border-radius: 300px;
   font-size: 1rem;
 }
-.presentazione-sect .description .bottoni a {
+.presentazione-sect .description .bottoni .link {
   background: #dc3c4d;
   padding: 0.5em 1em;
   text-decoration: none;
@@ -176,6 +190,7 @@ html {
 }
 
 .whatsapp-button {
+  text-decoration: none;
   gap: 0.5vw;
   background-color: #33b045;
   border: none;
@@ -185,6 +200,10 @@ html {
   justify-content: center;
   border-radius: 10px;
   font-size: 1rem;
+}
+
+.whatsapp-button:active {
+  text-decoration: none;
 }
 
 .whatsapp-button:hover {
@@ -277,38 +296,38 @@ html {
   justify-content: center;
   height: 100%;
 }
-.sect-carosello-offerte img {
+
+.offerta-card {
+  width: 70%;
+  max-width: 450px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  min-height: 500px;
+  background-color: #f7f7f7;
+  transition: transform 0.2s ease-out;
+}
+.offerta-card img {
   width: 100%;
   height: 220px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 25px 25px 0 0;
 }
-.sect-carosello-offerte .offerta-card {
-  width: 70%;
-  max-width: 450px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  min-height: 550px;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: #f7f7f7;
-  transition: transform 0.2s ease-out;
-}
-.sect-carosello-offerte .offerta-card h2 {
+.offerta-card h2 {
   font-weight: 500;
   font-size: 1.5rem;
 }
-.sect-carosello-offerte .offerta-card .content {
+.offerta-card .content {
   padding: 1.0625em 27px;
   display: flex;
   flex-direction: column;
   gap: 1.0625em;
 }
-.sect-carosello-offerte .offerta-card .content p {
+.offerta-card .content p {
   line-height: 25px;
 }
-.sect-carosello-offerte .offerta-card:hover {
+
+.offerta-card:hover {
   transform: translateY(-20px);
 }
 
@@ -383,6 +402,140 @@ html {
   font-size: 1.5rem;
 }
 
+.chi-siamo {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%;
+  background-color: #f7f7f7;
+  align-items: center;
+}
+.chi-siamo__content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.chi-siamo__content-wrapper .content {
+  flex-basis: 50%;
+}
+.chi-siamo__content-wrapper .content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.3em;
+}
+.chi-siamo__content-wrapper .content p {
+  width: 90%;
+  font-size: 1.25rem;
+}
+.chi-siamo__content-wrapper .content .stats {
+  display: flex;
+  align-items: center;
+  gap: 7.4375em;
+  margin-top: 1.25em;
+}
+.chi-siamo__content-wrapper .content .stats h1 {
+  font-weight: normal;
+  font-size: 4rem;
+  color: #dc3c4d;
+}
+.chi-siamo__content-wrapper .content .stats p {
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.obbiettivi-sect {
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  gap: 4rem;
+  justify-content: space-around;
+}
+.obbiettivi-sect .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-basis: 30%;
+}
+.obbiettivi-sect .content h1 {
+  font-size: 4rem;
+}
+.obbiettivi-sect .content h2 {
+  font-size: 2rem;
+}
+.obbiettivi-sect .content p {
+  font-size: 1.25rem;
+}
+
+.info-page img {
+  border-radius: 1.5625rem;
+  max-width: 100%;
+}
+
+.servizi-page {
+  padding: 0 5%;
+}
+.servizi-page .page-section header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 6em;
+}
+.servizi-page .page-section header h1 {
+  font-size: 3rem;
+}
+.servizi-page .page-section header p {
+  font-size: 1.25rem;
+}
+.servizi-page .grid-cards {
+  display: grid;
+  grid-template: auto/repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 4rem;
+  margin-bottom: 6em;
+}
+.servizi-page .special-card {
+  width: 70%;
+  max-width: 450px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  min-height: 500px;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #dc3c4d;
+  transition: transform 0.2s ease-out;
+  padding: 2.5625em 1.75em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.servizi-page .special-card * {
+  color: white;
+}
+.servizi-page .special-card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.0625em;
+}
+.servizi-page .special-card .content h2 {
+  font-size: 2rem;
+}
+.servizi-page .special-card .content p {
+  font-size: 1.3rem;
+  line-height: 1.5em;
+}
+.servizi-page .special-card .whatsapp-button {
+  width: 50%;
+  border-radius: 200px;
+  align-self: center;
+}
+
+@media (max-width: 1024px) {
+  .servizi-page .grid-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+  }
+}
 footer {
   display: flex;
   justify-content: space-evenly;

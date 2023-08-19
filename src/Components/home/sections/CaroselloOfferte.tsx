@@ -69,7 +69,7 @@ function Carosello() {
     >
       {caroselloItems.map((el) => {
         return (
-          <CardOfferta
+          <ServizioCard
             imgPath={el.imgPath}
             title={el.title}
             description={el.description}
@@ -80,7 +80,7 @@ function Carosello() {
   );
 }
 
-function CardOfferta({ imgPath, title, description }: CaroselloItem) {
+export function ServizioCard({ imgPath, title, description }: CaroselloItem) {
   return (
     <section className="offerta-card">
       <img src={imgPath} alt="" />

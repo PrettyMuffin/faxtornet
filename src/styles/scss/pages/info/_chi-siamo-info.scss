@@ -1,0 +1,43 @@
+.chi-siamo {
+  display: flex;
+  flex-direction: column;
+  // gap: 2.5rem;
+  padding: 0 10%;
+  background-color: $gray-bg;
+  align-items: center;
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .content {
+      flex-basis: 50%;
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 0.3em;
+      }
+
+      p {
+        width: 90%;
+        font-size: 1.25rem;
+      }
+
+      .stats {
+        display: flex;
+        align-items: center;
+        gap: 7.4375em;
+        margin-top: 1.25em;
+        h1 {
+          font-weight: normal;
+          font-size: 4rem;
+          color: $red-faxtornet;
+        }
+        p {
+          font-size: 1.125rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
