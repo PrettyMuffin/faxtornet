@@ -1,8 +1,8 @@
 .obbiettivi-sect {
   display: flex;
-  align-items: center;
   padding: 0 10%;
   gap: 4rem;
+  align-items: center;
   justify-content: space-around;
 
   .content {
@@ -24,7 +24,7 @@
 
 @media (max-width: 768px) {
   .obbiettivi-sect {
-    padding: 0 5%;
+    padding: 0 10%;
     margin-top: 20%;
     flex-direction: column;
     justify-content: start;
@@ -35,5 +35,10 @@
   }
 }
 
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+  .obbiettivi-sect {
+    img {
+      width: 50%;
+    }
+  }
 }

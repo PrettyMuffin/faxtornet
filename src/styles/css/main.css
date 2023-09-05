@@ -409,15 +409,16 @@ html {
   padding: 0 10%;
   background-color: #f7f7f7;
   align-items: center;
+  justify-content: center;
 }
 .chi-siamo__content-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 .chi-siamo__content-wrapper .content {
-  flex-basis: 50%;
+  flex-basis: 100%;
 }
 .chi-siamo__content-wrapper .content h1 {
   font-size: 3rem;
@@ -446,7 +447,8 @@ html {
 @media (max-width: 768px) {
   .chi-siamo {
     align-items: start;
-    padding: 0 5%;
+    padding: 0 10%;
+    padding-bottom: 3rem;
     gap: 4rem;
   }
   .chi-siamo__content-wrapper {
@@ -455,11 +457,19 @@ html {
     justify-content: start;
   }
 }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .chi-siamo__content-wrapper {
+    gap: 12%;
+  }
+  .chi-siamo img {
+    width: 50%;
+  }
+}
 .obbiettivi-sect {
   display: flex;
-  align-items: center;
   padding: 0 10%;
   gap: 4rem;
+  align-items: center;
   justify-content: space-around;
 }
 .obbiettivi-sect .content {
@@ -480,7 +490,7 @@ html {
 
 @media (max-width: 768px) {
   .obbiettivi-sect {
-    padding: 0 5%;
+    padding: 0 10%;
     margin-top: 20%;
     flex-direction: column;
     justify-content: start;
@@ -488,6 +498,11 @@ html {
   }
   .obbiettivi-sect img {
     order: 1;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .obbiettivi-sect img {
+    width: 50%;
   }
 }
 .info-page img {
@@ -738,7 +753,7 @@ footer .footer-navigazione .link-sezioni a {
     width: 60%;
   }
 }
-@media (min-width: 426px) and (max-width: 1024) {
+@media (min-width: 426px) and (max-width: 1024px) {
   html {
     font-size: 12px;
   }

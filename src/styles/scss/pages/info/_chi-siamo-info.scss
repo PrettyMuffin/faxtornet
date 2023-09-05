@@ -5,15 +5,16 @@
   padding: 0 10%;
   background-color: $gray-bg;
   align-items: center;
+  justify-content: center;
 
   &__content-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     .content {
-      flex-basis: 50%;
+      flex-basis: 100%;
       h1 {
         font-size: 3rem;
         margin-bottom: 0.3em;
@@ -46,7 +47,8 @@
 @media (max-width: 768px) {
   .chi-siamo {
     align-items: start;
-    padding: 0 5%;
+    padding: 0 10%;
+    padding-bottom: 3rem;
     gap: 4rem;
     &__content-wrapper {
       flex-direction: column;
@@ -56,8 +58,13 @@
   }
 }
 
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .chi-siamo {
-
+    &__content-wrapper {
+      gap: 12%;
+    }
+    img {
+      width: 50%;
+    }
   }
 }
