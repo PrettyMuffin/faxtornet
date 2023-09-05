@@ -68,9 +68,9 @@ function Navigazione() {
     <section className="footer-navigazione">
       <h1>Naviga</h1>
       <ul className="link-sezioni">
-        {elementiNavigazione.map((el) => {
+        {elementiNavigazione.map((el, i) => {
           return (
-            <li>
+            <li key={i}>
               <a href={`#${el.idRef}`}>{el.displayString}</a>
             </li>
           );

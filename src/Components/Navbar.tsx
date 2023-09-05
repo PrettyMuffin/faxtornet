@@ -44,5 +44,3 @@ function Navbar({ currentPage, handlePage }: NavBar) {
 }
 
 export default Navbar;
-
-export function NavLinks() {}
