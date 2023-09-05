@@ -1,7 +1,7 @@
 .chi-siamo {
   display: flex;
   flex-direction: column;
-  // gap: 2.5rem;
+  gap: 2.5rem;
   padding: 0 10%;
   background-color: $gray-bg;
   align-items: center;
@@ -11,6 +11,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+
     .content {
       flex-basis: 50%;
       h1 {
@@ -39,5 +40,24 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .chi-siamo {
+    align-items: start;
+    padding: 0 5%;
+    gap: 4rem;
+    &__content-wrapper {
+      flex-direction: column;
+      gap: 4rem;
+      justify-content: start;
+    }
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .chi-siamo {
+
   }
 }

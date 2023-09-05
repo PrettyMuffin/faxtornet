@@ -405,6 +405,7 @@ html {
 .chi-siamo {
   display: flex;
   flex-direction: column;
+  gap: 2.5rem;
   padding: 0 10%;
   background-color: #f7f7f7;
   align-items: center;
@@ -442,6 +443,18 @@ html {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .chi-siamo {
+    align-items: start;
+    padding: 0 5%;
+    gap: 4rem;
+  }
+  .chi-siamo__content-wrapper {
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: start;
+  }
+}
 .obbiettivi-sect {
   display: flex;
   align-items: center;
@@ -465,6 +478,18 @@ html {
   font-size: 1.25rem;
 }
 
+@media (max-width: 768px) {
+  .obbiettivi-sect {
+    padding: 0 5%;
+    margin-top: 20%;
+    flex-direction: column;
+    justify-content: start;
+    gap: 4rem;
+  }
+  .obbiettivi-sect img {
+    order: 1;
+  }
+}
 .info-page img {
   border-radius: 1.5625rem;
   max-width: 100%;

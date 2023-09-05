@@ -21,3 +21,19 @@
     flex-basis: 30%;
   }
 }
+
+@media (max-width: 768px) {
+  .obbiettivi-sect {
+    padding: 0 5%;
+    margin-top: 20%;
+    flex-direction: column;
+    justify-content: start;
+    gap: 4rem;
+    img {
+      order: 1;
+    }
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+}
