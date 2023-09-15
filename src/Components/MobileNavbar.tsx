@@ -1,7 +1,6 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiHome, BiInfoCircle } from "react-icons/bi";
-import { MdDesignServices, MdAutorenew } from "react-icons/md";
-import { FaRegNewspaper } from "react-icons/fa";
+import { MdDesignServices } from "react-icons/md";
 import { NavBar } from "../Models";
 import { NavLink } from "react-router-dom";
 import { useRef } from "react";
