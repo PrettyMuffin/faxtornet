@@ -8,8 +8,9 @@ function WhyNoi() {
         <div className="trattino"></div>
         <h1>Perché Scegliere Noi</h1>
         <p>
-          Ci sono molti motivi per cui avere Faxtornet come prima scelta quando
-          si tratta di riparazione, eccone alcuni:
+          Ci sono un milione di (giga)motivi per scegliere Faxtornet quando si
+          tratta di riparazione. Non ci credi? Te le diamo noi tre buone
+          ragioni.
         </p>
       </header>
       <section className="card-container">

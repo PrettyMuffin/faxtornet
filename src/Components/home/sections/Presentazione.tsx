@@ -17,7 +17,7 @@ function Descrizione() {
   return (
     <section className="description">
       <div className="trattino"></div>
-      <h1>Riparazioni e assistenza professionali su qualunque computer.</h1>
+      <h1>Riparazioni e assistenza professionali su qualunque computer</h1>
       <p>
         Benvenuti a Faxtornet - Dove l’innovazione incontra l’esperienza.
         Benvenuto nel futuro, al sicuro nelle mani di esperti.

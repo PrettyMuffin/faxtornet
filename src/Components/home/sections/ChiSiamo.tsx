@@ -19,10 +19,14 @@ function Content() {
       <div className="trattino"></div>
       <h1>Chi siamo e come lavoriamo.</h1>
       <p>
-        Benvenuti da Faxtornet, il luogo dove i computer trovano nuova vita!
-        Offriamo servizi di riparazione e assistenza personalizzati, curati
-        direttamente da Campagnolo Filippo, il nostro esperto tecnico.
-        Affidabilità e competenza al vostro servizio.
+        Benvenuti da <span style={{ fontWeight: "bold" }}>Faxtornet</span>, il
+        luogo dove i computer trovano nuova vita. Anche se non indossiamo un
+        camice bianco, lavoriamo all’interno di una vera e propria “clinica”
+        (computer clinic), capace di offrire servizi di riparazione e assistenza
+        personalizzati. <br /> Mettiamo al tuo servizio affidabilità e
+        competenza ripristinando pc e computer desktop, grazie all’opera di un
+        tecnico dalla consolidata esperienza:{" "}
+        <span style={{ fontWeight: "bold" }}>Filippo Campagnolo.</span>
       </p>
       <section className="stats">
         <div>

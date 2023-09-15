@@ -9,10 +9,10 @@ function CaroselloOfferte() {
     <section className="sect-carosello-offerte" id="servizi">
       <header>
         <div className="trattino"></div>
-        <h1>Cosa Offriamo</h1>
+        <h1>I Nostri Servizi</h1>
         <p>
-          Provvediamo diversi servizi di riparazione e soluzioni per i nostri
-          clienti:
+          Disponiamo di servizi di riparazione e soluzioni su misura per tutti o
+          quasi i nostri clienti.
         </p>
       </header>
       <Carosello />

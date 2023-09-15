@@ -52,30 +52,6 @@ function MobileNavbar({ currentPage, handlePage }: NavBar) {
             />
             Servizi
           </NavLink>
-          <NavLink
-            to={"/news"}
-            className={currentPage === "news" ? "link selected" : "link"}
-            onClick={() => handlePage("news")}
-          >
-            <FaRegNewspaper
-              className={currentPage === "news" ? "icon selected" : "icon"}
-            />
-            News
-          </NavLink>
-          <NavLink
-            to={"/ricondizionati"}
-            className={
-              currentPage === "ricondizionati" ? "link selected" : "link"
-            }
-            onClick={() => handlePage("ricondizionati")}
-          >
-            <MdAutorenew
-              className={
-                currentPage === "ricondizionati" ? "icon selected" : "icon"
-              }
-            />{" "}
-            Ricondizionati
-          </NavLink>
         </section>
       </section>
     </section>

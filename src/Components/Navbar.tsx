@@ -25,20 +25,6 @@ function Navbar({ currentPage, handlePage }: NavBar) {
       >
         Servizi
       </NavLink>
-      <NavLink
-        to={"/news"}
-        className={currentPage === "news" ? "link selected" : "link"}
-        onClick={() => handlePage("news")}
-      >
-        News
-      </NavLink>
-      <NavLink
-        to={"/ricondizionati"}
-        className={currentPage === "ricondizionati" ? "link selected" : "link"}
-        onClick={() => handlePage("ricondizionati")}
-      >
-        Ricondizionati
-      </NavLink>
     </section>
   );
 }
