@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import qr from "../../../assets/images/qr.png";
 
 import Carousel from "react-multi-carousel";
@@ -9,6 +9,8 @@ import emailIcon from "../../../assets/images/email.png";
 import phoneIcon from "../../../assets/images/phoneLogo.png";
 import ConfirmEmailToast from "./ConfirmEmailToast";
 import { ToastProp } from "../../../Models";
+
+import Email from "../../../smtp";
 
 function ChiSiamo() {
   const [toastConfirm, setToastConfirm] = useState<ToastProp>({
@@ -40,7 +42,7 @@ function ChiSiamo() {
     const data = new FormData(e.currentTarget);
     // TODO: Mettere il secureToken come variabile d'ambiente su netlify
     // TODO: Creare Database.json con le mail criptate in sha256
-    window?.Email.send({
+    Email.send({
       SecureToken: "eca12333-d8d3-487c-8ada-7ec1a647917c",
       To: "markobrunello2010@gmail.com",
       From: "airpippo@gmail.com",
@@ -103,7 +105,13 @@ function ContattoForm({ sendEmail }: ContattoFormProp) {
   return (
     <section className="formContatto">
       <h2>Compila per prenotare una riparazione</h2>
-      <form onSubmit={(e) => sendEmail(e)}>
+      <form
+        onSubmit={(e) => {
+          sendEmail(e);
+          //TODO fare error system
+          setIsError(false); // solo per production
+        }}
+      >
         <div className="input-container">
           <img src={userIcon} />
           <input
