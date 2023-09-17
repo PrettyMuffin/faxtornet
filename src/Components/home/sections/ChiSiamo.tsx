@@ -14,7 +14,7 @@ import Email from "../../../smtp";
 
 function ChiSiamo() {
   const [toastConfirm, setToastConfirm] = useState<ToastProp>({
-    canShow: true,
+    canShow: false,
     text: "Email inviata correttamente",
     error: false,
   });
