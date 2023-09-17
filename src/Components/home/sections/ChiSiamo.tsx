@@ -38,7 +38,8 @@ function ChiSiamo() {
   function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    // 3A7EBEE7B559944D7304A400582E91167B77
+    // TODO: Mettere il secureToken come variabile d'ambiente su netlify
+    // TODO: Creare Database.json con le mail criptate in sha256
     window?.Email.send({
       SecureToken: "eca12333-d8d3-487c-8ada-7ec1a647917c",
       To: "markobrunello2010@gmail.com",
