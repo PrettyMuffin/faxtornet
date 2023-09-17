@@ -5,13 +5,18 @@
   align-items: center;
 
   .content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     height: max-content;
-    justify-content: space-evenly;
+    padding-inline: 10%;
+
+    column-gap: 5em;
+
+    grid-template-columns: 2fr 1fr;
+    place-content: center;
+    align-items: center;
+    justify-content: center;
 
     .content {
-      flex-basis: 26%;
       h1 {
         font-size: 3rem;
         margin-bottom: 0.3em;
@@ -19,6 +24,7 @@
 
       p {
         font-size: 1.25rem;
+        width: 90%;
       }
 
       .stats {
@@ -38,8 +44,70 @@
       }
     }
 
+    .formContatto {
+      background-color: white;
+      padding: 3em 2em;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 25px;
+      width: 90%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5em;
+      }
+
+      form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2em;
+      }
+
+      button {
+        width: 40%;
+        padding: 0.7em 1em;
+        border-radius: 99px;
+        border: none;
+        background-color: $red-faxtornet;
+        color: white;
+        font-size: 1rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .input-container {
+        position: relative;
+        img {
+          height: 2rem;
+          z-index: 1;
+          position: absolute;
+          // allineo centro dell'input
+          top: 50%;
+          left: 1em;
+          transform: translateY(-50%);
+        }
+      }
+
+      input {
+        font-size: 1rem;
+        position: relative;
+        border-radius: 99px;
+        padding: 1em 3.5em;
+        width: 100%;
+        border: 1px solid lightgray;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
     .qr-card {
-      width: 20vw;
+      width: 22vw;
       background-color: white;
       display: flex;
       flex-direction: column;
@@ -47,7 +115,7 @@
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
       border-radius: 25px;
       align-items: center;
-      padding: 2em 3em;
+      padding: 2em 2.5em;
       img {
         // width: clamp(90%, 270px, 30%);
         width: 90%;
@@ -57,10 +125,6 @@
         font-size: 1.5rem;
       }
       transition: all ease-out 0.2s;
-    }
-
-    .qr-card:hover {
-      transform: translateY(-20px);
     }
   }
 }

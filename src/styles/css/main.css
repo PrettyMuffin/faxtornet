@@ -3,6 +3,40 @@
   min-height: 100vh;
 }
 
+.toast {
+  position: fixed;
+  bottom: 3%;
+  right: -100%;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  font-size: 1.2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: all ease 0.5s;
+  text-wrap: nowrap;
+  border-radius: 7px;
+  padding: 0.5em 0.7em;
+}
+.toast.slide-in {
+  right: 2%;
+}
+.toast .icon {
+  height: 100%;
+}
+.toast.confirm {
+  background-color: #98fb98;
+}
+.toast.confirm .icon {
+  fill: #006400;
+}
+.toast.error {
+  background-color: #ff9494;
+}
+.toast.error .icon {
+  fill: #d22b2b;
+}
+
 html {
   font-size: 16px;
   overflow-x: hidden;
@@ -117,8 +151,7 @@ html {
   width: 100%;
   transition: left 0.5s ease-out;
 }
-
-.slide-in {
+.nav-wrapper.slide-in {
   left: 0;
 }
 
@@ -217,14 +250,16 @@ html {
   align-items: center;
 }
 .chi-siamo-sect .content-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   height: -moz-max-content;
   height: max-content;
-  justify-content: space-evenly;
-}
-.chi-siamo-sect .content-wrapper .content {
-  flex-basis: 26%;
+  padding-inline: 10%;
+  -moz-column-gap: 5em;
+       column-gap: 5em;
+  grid-template-columns: 2fr 1fr;
+  place-content: center;
+  align-items: center;
+  justify-content: center;
 }
 .chi-siamo-sect .content-wrapper .content h1 {
   font-size: 3rem;
@@ -232,6 +267,7 @@ html {
 }
 .chi-siamo-sect .content-wrapper .content p {
   font-size: 1.25rem;
+  width: 90%;
 }
 .chi-siamo-sect .content-wrapper .content .stats {
   display: flex;
@@ -248,8 +284,63 @@ html {
   font-size: 1.125rem;
   text-align: center;
 }
+.chi-siamo-sect .content-wrapper .formContatto {
+  background-color: white;
+  padding: 3em 2em;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chi-siamo-sect .content-wrapper .formContatto h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5em;
+}
+.chi-siamo-sect .content-wrapper .formContatto form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+.chi-siamo-sect .content-wrapper .formContatto button {
+  width: 40%;
+  padding: 0.7em 1em;
+  border-radius: 99px;
+  border: none;
+  background-color: #dc3c4d;
+  color: white;
+  font-size: 1rem;
+}
+.chi-siamo-sect .content-wrapper .formContatto button:hover {
+  cursor: pointer;
+}
+.chi-siamo-sect .content-wrapper .formContatto .input-container {
+  position: relative;
+}
+.chi-siamo-sect .content-wrapper .formContatto .input-container img {
+  height: 2rem;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 1em;
+  transform: translateY(-50%);
+}
+.chi-siamo-sect .content-wrapper .formContatto input {
+  font-size: 1rem;
+  position: relative;
+  border-radius: 99px;
+  padding: 1em 3.5em;
+  width: 100%;
+  border: 1px solid lightgray;
+}
+.chi-siamo-sect .content-wrapper .formContatto input:focus {
+  outline: none;
+}
 .chi-siamo-sect .content-wrapper .qr-card {
-  width: 20vw;
+  width: 22vw;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -257,7 +348,7 @@ html {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   align-items: center;
-  padding: 2em 3em;
+  padding: 2em 2.5em;
   transition: all ease-out 0.2s;
 }
 .chi-siamo-sect .content-wrapper .qr-card img {
@@ -266,9 +357,6 @@ html {
 .chi-siamo-sect .content-wrapper .qr-card p {
   text-align: center;
   font-size: 1.5rem;
-}
-.chi-siamo-sect .content-wrapper .qr-card:hover {
-  transform: translateY(-20px);
 }
 
 .sect-carosello-offerte {
@@ -290,11 +378,27 @@ html {
 .sect-carosello-offerte .carosello {
   margin-top: 2.5em;
 }
-.sect-carosello-offerte .carosello-elemento {
+
+.carosello-elemento {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+}
+
+.react-multi-carousel-track {
+  list-style: none;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  padding: 2em 0;
+  margin-bottom: 2em;
+  flex-direction: row;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, transition;
 }
 
 .offerta-card {
@@ -325,26 +429,22 @@ html {
 }
 .offerta-card .content p {
   line-height: 25px;
+  font-size: 1.1rem;
+  font-weight: 300;
 }
 
+@media (min-width: 425px) and (max-width: 900px) {
+  .offerta-card {
+    width: 90%;
+  }
+}
+@media (min-width: 901px) and (max-width: 1024px) {
+  .offerta-card {
+    width: 75%;
+  }
+}
 .offerta-card:hover {
   transform: translateY(-20px);
-}
-
-.react-multi-carousel-track {
-  list-style: none;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  padding: 2em 0;
-  margin-bottom: 2em;
-  flex-direction: row;
-  position: relative;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  will-change: transform, transition;
 }
 
 .custom-dot {
@@ -360,6 +460,14 @@ html {
   background-color: #dc3c4d;
 }
 
+@media (max-width: 425px) {
+  .offerta-card .content h2 {
+    font-size: 2.3rem;
+  }
+  .offerta-card .content p {
+    font-size: 1.7rem;
+  }
+}
 .why-us {
   height: 100vh;
   margin-top: 6em;
@@ -511,7 +619,7 @@ html {
 }
 
 .servizi-page {
-  padding: 0 5%;
+  padding: 0 10%;
 }
 .servizi-page .page-section header {
   display: flex;
@@ -532,8 +640,10 @@ html {
   row-gap: 4rem;
   margin-bottom: 6em;
 }
+.servizi-page .grid-cards .offerta-card {
+  width: 100%;
+}
 .servizi-page .special-card {
-  width: 70%;
   max-width: 450px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
@@ -563,11 +673,26 @@ html {
   line-height: 1.5em;
 }
 .servizi-page .special-card .whatsapp-button {
-  width: 50%;
+  display: flex;
+  gap: 0.5em;
+  width: -moz-fit-content;
+  width: fit-content;
   border-radius: 200px;
+  font-size: 1.7rem;
   align-self: center;
 }
+.servizi-page .special-card .whatsapp-button .whatsapp-btn-logo {
+  height: 1.7rem;
+}
 
+@media (max-width: 425px) {
+  .servizi-page .special-card .content h2 {
+    font-size: 2.5rem;
+  }
+  .servizi-page .special-card .content p {
+    font-size: 1.7rem;
+  }
+}
 @media (max-width: 1024px) {
   .servizi-page .grid-cards {
     display: flex;

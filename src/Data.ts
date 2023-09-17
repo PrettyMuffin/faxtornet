@@ -69,9 +69,9 @@ export const caroselloItems: CaroselloItem[] = [
 export const whyNoiItems: WhyNoiCard[] = [
   {
     imgPath: serviziAffidabili,
-    title: "Paghi solo se sei soddisfatto",
+    title: "100% soddisfazione",
     descrizione:
-      "Soddisfare il cliente è la nostra priorità. Se non sei soddisfatto, è semplice: non paghi!",
+      "La nostra priorità. Sì, siamo pronti ad ascoltarti per capire quali sono le tue esigenze. Fino a quando non sarai pienamente soddisfatto.",
   },
   {
     imgPath: qualificato,
@@ -86,3 +86,21 @@ export const whyNoiItems: WhyNoiCard[] = [
       "È un valore fondamentale, in cui crediamo fermamente. Per noi, l’onestà è anzitutto chiarezza e trasparenza con il cliente: se un problema non te lo possiamo risolvere, non ti faremo perdere tempo inutilmente.",
   },
 ];
+
+export const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1374 },
+    items: 3,
+    slidesToSlide: 3,
+  },
+  tablet: {
+    breakpoint: { max: 1374, min: 500 },
+    items: 2,
+    slidesToSlide: 2,
+  },
+  mobile: {
+    breakpoint: { max: 500, min: 0 },
+    items: 1,
+    slidesToSlide: 1,
+  },
+};

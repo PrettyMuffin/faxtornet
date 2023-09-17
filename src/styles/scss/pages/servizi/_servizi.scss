@@ -1,5 +1,5 @@
 .servizi-page {
-  padding: 0 5%;
+  padding: 0 10%;
 
   .page-section {
     header {
@@ -25,10 +25,13 @@
     row-gap: 4rem;
 
     margin-bottom: 6em;
+
+    .offerta-card {
+      width: 100%;
+    }
   }
 
   .special-card {
-    width: 70%;
     max-width: 450px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
@@ -60,9 +63,30 @@
     }
 
     .whatsapp-button {
-      width: 50%;
+      display: flex;
+      gap: 0.5em;
+      width: fit-content;
       border-radius: 200px;
+      font-size: 1.7rem;
       align-self: center;
+      .whatsapp-btn-logo {
+        height: 1.7rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .servizi-page {
+    .special-card {
+      .content {
+        h2 {
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 1.7rem;
+        }
+      }
     }
   }
 }

@@ -24,3 +24,9 @@ export type NavBar = {
   currentPage: string;
   handlePage: Function;
 };
+
+export interface ToastProp {
+  canShow?: boolean;
+  text: string;
+  error: boolean;
+}

@@ -36,7 +36,10 @@ export function WhatsappButton() {
   const WHATSAPP_LINK = "https://wa.me/message/JSWGP4IQ5LVWM1?src=qr";
   return (
     <a className="whatsapp-button" href={WHATSAPP_LINK}>
-      <FaWhatsapp size={"1.5rem"} /> Contattaci
+      <span className="whatsapp-btn-logo">
+        <FaWhatsapp size={"100%"} />
+      </span>
+      Contattaci
     </a>
   );
 }

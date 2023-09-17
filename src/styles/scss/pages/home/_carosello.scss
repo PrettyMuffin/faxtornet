@@ -20,15 +20,29 @@
   .carosello {
     margin-top: 2.5em;
   }
+}
+.carosello-elemento {
+  // Per posizionare la carta al centro
+  // dell'elemento, sennò è tutta sbilenca
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .carosello-elemento {
-    // Per posizionare la carta al centro
-    // dell'elemento, sennò è tutta sbilenca
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
+// Customizzo Carosello
+.react-multi-carousel-track {
+  list-style: none;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  padding: 2em 0;
+  margin-bottom: 2em;
+  flex-direction: row;
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, transition;
 }
 
 .offerta-card {
@@ -56,28 +70,25 @@
     gap: 1.0625em;
     p {
       line-height: 25px;
+      font-size: 1.1rem;
+      font-weight: 300;
     }
+  }
+}
+
+@media (min-width: 425px) and (max-width: 900px) {
+  .offerta-card {
+    width: 90%;
+  }
+}
+@media (min-width: 901px) and (max-width: 1024px) {
+  .offerta-card {
+    width: 75%;
   }
 }
 
 .offerta-card:hover {
   transform: translateY(-20px);
-}
-
-// Customizzo Carosello
-.react-multi-carousel-track {
-  list-style: none;
-  height: fit-content;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  padding: 2em 0;
-  margin-bottom: 2em;
-  flex-direction: row;
-  position: relative;
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  will-change: transform, transition;
 }
 
 .custom-dot {
@@ -92,5 +103,18 @@
 
   &.active {
     background-color: $red-faxtornet;
+  }
+}
+
+@media (max-width: 425px) {
+  .offerta-card {
+    .content {
+      h2 {
+        font-size: 2.3rem;
+      }
+      p {
+        font-size: 1.7rem;
+      }
+    }
   }
 }

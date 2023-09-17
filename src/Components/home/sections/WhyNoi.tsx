@@ -6,20 +6,21 @@ function WhyNoi() {
     <section className="why-us" id="why-us">
       <header>
         <div className="trattino"></div>
-        <h1>Perché Scegliere Noi</h1>
+        <h1>FAXTORNET? EASY!</h1>
         <p>
-          Ci sono un milione di (giga)motivi per scegliere Faxtornet quando si
+          Ci sono un milione di (giga) motivi per scegliere Faxtornet quando si
           tratta di riparazione. Non ci credi? Te le diamo noi tre buone
           ragioni.
         </p>
       </header>
       <section className="card-container">
-        {whyNoiItems.map((el) => {
+        {whyNoiItems.map((el, i) => {
           return (
             <WhyNoiCardPage
               imgPath={el.imgPath}
               title={el.title}
               descrizione={el.descrizione}
+              key={i}
             />
           );
         })}

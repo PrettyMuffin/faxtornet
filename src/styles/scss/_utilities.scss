@@ -1,3 +1,41 @@
 .page-section {
   min-height: 100vh;
 }
+
+.toast {
+  position: fixed;
+  bottom: 3%;
+  right: -100%;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  font-size: 1.2rem;
+  width: fit-content;
+  transition: all ease 0.5s;
+  text-wrap: nowrap;
+
+  border-radius: 7px;
+  padding: 0.5em 0.7em;
+
+  &.slide-in {
+    right: 2%;
+  }
+
+  .icon {
+    height: 100%;
+  }
+
+  &.confirm {
+    background-color: $pale-green;
+    .icon {
+      fill: $icon-confirm;
+    }
+  }
+
+  &.error {
+    background-color: $error-red;
+    .icon {
+      fill: $icon-error;
+    }
+  }
+}
