@@ -19,7 +19,6 @@
 
   .grid-cards {
     display: grid;
-    // grid-template: auto / repeat(3, 1fr);
     grid-template: auto / repeat(3, 1fr);
     justify-items: center;
     row-gap: 4rem;
@@ -27,12 +26,13 @@
     margin-bottom: 6em;
 
     .offerta-card {
-      width: 100%;
+      width: 70%;
     }
   }
 
   .special-card {
     max-width: 450px;
+    width: 70%;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     min-height: 500px;
@@ -78,13 +78,48 @@
 
 @media (max-width: 425px) {
   .servizi-page {
+    .grid-cards {
+      .offerta-card {
+        width: 100%;
+      }
+      .special-card {
+        width: 100%;
+        .content {
+          h2 {
+            font-size: 2.5rem;
+          }
+          p {
+            font-size: 1.7rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .servizi-page {
+    .grid-cards {
+      .offerta-card {
+        width: 60%;
+        .content {
+          h2 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
     .special-card {
+      width: 60%;
       .content {
         h2 {
-          font-size: 2.5rem;
+          font-size: 2rem;
         }
         p {
-          font-size: 1.7rem;
+          font-size: 1.5rem;
         }
       }
     }
@@ -98,6 +133,33 @@
       flex-wrap: wrap;
       gap: 4rem;
       justify-content: center;
+      .content {
+        h2 {
+          font-size: 2.2rem;
+        }
+        p {
+          font-size: 1.7rem;
+        }
+      }
+    }
+    .special-card {
+      .content {
+        h2 {
+          font-size: 2.2rem;
+        }
+        p {
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .servizi-page {
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

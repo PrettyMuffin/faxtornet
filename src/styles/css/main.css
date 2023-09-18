@@ -234,6 +234,10 @@ html {
   border-radius: 10px;
   font-size: 1rem;
 }
+.whatsapp-button .whatsapp-btn-logo {
+  aspect-ratio: 1/1;
+  height: 2rem;
+}
 
 .whatsapp-button:active {
   text-decoration: none;
@@ -340,7 +344,7 @@ html {
   outline: none;
 }
 .chi-siamo-sect .content-wrapper .qr-card {
-  width: 22vw;
+  width: 80%;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -359,6 +363,11 @@ html {
   font-size: 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .chi-siamo-sect .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 .sect-carosello-offerte {
   height: 100vh;
   max-width: 85vw;
@@ -521,12 +530,8 @@ html {
 }
 .chi-siamo__content-wrapper {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-.chi-siamo__content-wrapper .content {
-  flex-basis: 100%;
 }
 .chi-siamo__content-wrapper .content h1 {
   font-size: 3rem;
@@ -566,6 +571,14 @@ html {
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
+  .chi-siamo__content-wrapper {
+    gap: 12%;
+  }
+  .chi-siamo img {
+    width: 50%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
   .chi-siamo__content-wrapper {
     gap: 12%;
   }
@@ -613,6 +626,14 @@ html {
     width: 50%;
   }
 }
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .obbiettivi-sect {
+    gap: 12%;
+  }
+  .obbiettivi-sect img {
+    width: 50%;
+  }
+}
 .info-page img {
   border-radius: 1.5625rem;
   max-width: 100%;
@@ -641,10 +662,11 @@ html {
   margin-bottom: 6em;
 }
 .servizi-page .grid-cards .offerta-card {
-  width: 100%;
+  width: 70%;
 }
 .servizi-page .special-card {
   max-width: 450px;
+  width: 70%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   min-height: 500px;
@@ -686,11 +708,37 @@ html {
 }
 
 @media (max-width: 425px) {
-  .servizi-page .special-card .content h2 {
+  .servizi-page .grid-cards .offerta-card {
+    width: 100%;
+  }
+  .servizi-page .grid-cards .special-card {
+    width: 100%;
+  }
+  .servizi-page .grid-cards .special-card .content h2 {
     font-size: 2.5rem;
   }
-  .servizi-page .special-card .content p {
+  .servizi-page .grid-cards .special-card .content p {
     font-size: 1.7rem;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .servizi-page .grid-cards .offerta-card {
+    width: 60%;
+  }
+  .servizi-page .grid-cards .offerta-card .content h2 {
+    font-size: 2rem;
+  }
+  .servizi-page .grid-cards .offerta-card .content p {
+    font-size: 1.5rem;
+  }
+  .servizi-page .special-card {
+    width: 60%;
+  }
+  .servizi-page .special-card .content h2 {
+    font-size: 2rem;
+  }
+  .servizi-page .special-card .content p {
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 1024px) {
@@ -699,6 +747,24 @@ html {
     flex-wrap: wrap;
     gap: 4rem;
     justify-content: center;
+  }
+  .servizi-page .grid-cards .content h2 {
+    font-size: 2.2rem;
+  }
+  .servizi-page .grid-cards .content p {
+    font-size: 1.7rem;
+  }
+  .servizi-page .special-card .content h2 {
+    font-size: 2.2rem;
+  }
+  .servizi-page .special-card .content p {
+    font-size: 1.7rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .servizi-page .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 footer {
@@ -800,10 +866,6 @@ footer .footer-navigazione .link-sezioni a {
   .chi-siamo-sect .content-wrapper .content .stats {
     gap: 6em;
   }
-  .chi-siamo-sect .content-wrapper .qr-card {
-    padding: 2em 0.5em;
-    width: 100%;
-  }
   .sect-carosello-offerte .offerta-card {
     width: 100%;
   }
@@ -874,23 +936,10 @@ footer .footer-navigazione .link-sezioni a {
     gap: 2rem;
     align-items: center;
   }
-  .chi-siamo-sect .content-wrapper .qr-card {
-    width: 60%;
-  }
 }
 @media (min-width: 426px) and (max-width: 1024px) {
   html {
     font-size: 12px;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  .chi-siamo-sect .content-wrapper .qr-card {
-    width: 30%;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1440px) {
-  .chi-siamo-sect .content-wrapper .qr-card {
-    width: 25%;
   }
 }
 @media (min-width: 2000px) {

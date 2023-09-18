@@ -9,12 +9,10 @@
 
   &__content-wrapper {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
 
     .content {
-      flex-basis: 100%;
       h1 {
         font-size: 3rem;
         margin-bottom: 0.3em;
@@ -59,6 +57,17 @@
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
+  .chi-siamo {
+    &__content-wrapper {
+      gap: 12%;
+    }
+    img {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
   .chi-siamo {
     &__content-wrapper {
       gap: 12%;
