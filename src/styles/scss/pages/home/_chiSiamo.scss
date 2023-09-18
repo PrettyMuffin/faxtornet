@@ -1,6 +1,5 @@
 .chi-siamo-sect {
   background-color: $gray-bg;
-  height: 100vh;
   display: flex;
   align-items: center;
 
@@ -134,5 +133,11 @@
     .content-wrapper {
       grid-template-columns: 1fr;
     }
+  }
+}
+
+@media (max-width: 425px) {
+  .chi-siamo-sect {
+    padding-top: 15%;
   }
 }
