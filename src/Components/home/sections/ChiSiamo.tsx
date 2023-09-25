@@ -40,8 +40,6 @@ function ChiSiamo() {
   function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    // TODO: Mettere il secureToken come variabile d'ambiente su netlify
-    // TODO: Creare Database.json con le mail criptate in sha256
     Email.send({
       SecureToken: "eca12333-d8d3-487c-8ada-7ec1a647917c",
       To: "markobrunello2010@gmail.com",
@@ -108,8 +106,9 @@ function ContattoForm({ sendEmail }: ContattoFormProp) {
       <form
         onSubmit={(e) => {
           sendEmail(e);
-          //TODO fare error system
           setIsError(false); // solo per production
+          // pulisco tutti gli input-fileds dopo che l'utente ha fatto il submit
+          e.currentTarget.reset();
         }}
       >
         <div className="input-container">
