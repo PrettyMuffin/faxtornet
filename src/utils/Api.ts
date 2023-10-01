@@ -1,7 +1,6 @@
 import { Review } from "../Models";
 
-const GOOGLE_API_KEY =
-  import.meta.env.VITE_GOOGLE_API_KEY || process.env.GOOGLE_API_KEY;
+const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
 export async function GetRecensioni() {
   console.log(GOOGLE_API_KEY);
