@@ -1,12 +1,22 @@
 import { Review } from "../Models";
 
+const GOOGLE_API_KEY = process.env.GOOGLE_API_KEY;
+
 export async function GetRecensioni() {
+  console.log(GOOGLE_API_KEY);
+
   const data = await fetch(
     // heroku app, only in development server, when production, remove
     // "https://cors-anywhere.herokuapp.com/" +
-    "https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJU1RsmiEkeUcR5yG23k0klJI&key=AIzaSyCVD-K-pJBh1-Oyi3gy_lfAVo5tY7ofJ-c&reviews_sort=newest&language=it"
+    `https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJU1RsmiEkeUcR5yG23k0klJI&key=${GOOGLE_API_KEY}&reviews_sort=newest&language=it`,
+    {
+      mode: "cors",
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    }
   );
-  if (!data.ok) return { reviews: [], totalReviews: 0 };
+  if (!data.ok) console.error("Errore nella richiesta dei dati");
   const {
     reviews,
     user_ratings_total: totalReviews,
