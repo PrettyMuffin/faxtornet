@@ -29,7 +29,20 @@ export const homeLinks: ElementoNavigazione[] = [
   },
 ];
 
-export const infoLinks: ElementoNavigazione[] = [];
+export const infoLinks: ElementoNavigazione[] = [
+  {
+    idRef: "info-chi-siamo",
+    displayString: "Chi Siamo",
+  },
+  {
+    idRef: "obbiettivi",
+    displayString: "Obbiettivi",
+  },
+  {
+    idRef: "recensioni",
+    displayString: "Recensioni",
+  },
+];
 
 // Carosello - Home
 export const caroselloItems: CaroselloItem[] = [

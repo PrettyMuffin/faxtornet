@@ -7,7 +7,7 @@ function Recensioni() {
   const { recensioni } = useContext(PageContext);
 
   return (
-    <section className="page-section recensioni-sect">
+    <section className="page-section recensioni-sect" id="recensioni">
       <header>
         <div className="trattino"></div>
         <h1>Perché le persone scelgono Faxtornet</h1>

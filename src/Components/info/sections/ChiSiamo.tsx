@@ -7,7 +7,7 @@ import CountUp from "react-countup";
 
 function ChiSiamo() {
   return (
-    <section className="page-section chi-siamo">
+    <section id="info-chi-siamo" className="page-section chi-siamo">
       <HeaderLink />
       <div className="chi-siamo__content-wrapper">
         <Content />

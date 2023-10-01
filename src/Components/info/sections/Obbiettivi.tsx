@@ -2,7 +2,7 @@ import img from "../../../assets/images/filippo-mac.jpg";
 
 function Obbiettivi() {
   return (
-    <section className="page-section obbiettivi-sect">
+    <section id="obbiettivi" className="page-section obbiettivi-sect">
       <img src={img} alt="" />
       <section className="content">
         <div className="trattino"></div>
