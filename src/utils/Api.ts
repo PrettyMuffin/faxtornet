@@ -3,8 +3,6 @@ import { Review } from "../Models";
 const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
 export async function GetRecensioni() {
-  console.log(GOOGLE_API_KEY);
-
   const data = await fetch(
     // heroku app, only in development server, when production, remove
     "https://cors-anywhere.herokuapp.com/" +
