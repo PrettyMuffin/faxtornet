@@ -1,7 +1,7 @@
 import HeaderLink from "../../HeaderLink";
 
 import assetWho from "../../../assets/images/filippo-desktop.jpg";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { PageContext } from "../../../App";
 import CountUp from "react-countup";
 
