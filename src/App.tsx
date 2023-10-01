@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import Footer from "./Components/Footer";
 import NavbarRenderer from "./Components/NavbarRenderer";
 import HomePage from "./Components/home/HomePage";
@@ -6,20 +6,32 @@ import Info from "./Components/info/Info";
 import Servizi from "./Components/servizi/Servizi";
 import "./styles/css/main.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ContestType } from "./Models";
+import { ContestType, Review } from "./Models";
+import { GetRecensioni } from "./utils/Api";
 
-export const CurrentPageContext = createContext<ContestType>({});
+export const PageContext = createContext<ContestType>({});
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
+  const [recensioni, setRecensioni] = useState<Review[]>([]);
+  const [recensioniTotali, setRecensioniTotali] = useState(0);
+
+  useEffect(() => {
+    GetRecensioni().then((recensioni) => {
+      setRecensioni(recensioni.reviews);
+      setRecensioniTotali(recensioni.totalReviews);
+    });
+  }, []);
 
   const contextValue: ContestType = {
     currentPage,
+    recensioni,
+    recensioniTotali,
     setCurrentPage,
   };
 
   return (
-    <CurrentPageContext.Provider value={contextValue}>
+    <PageContext.Provider value={contextValue}>
       <BrowserRouter>
         <header>
           <NavbarRenderer />
@@ -31,7 +43,7 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-    </CurrentPageContext.Provider>
+    </PageContext.Provider>
   );
 }
 

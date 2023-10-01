@@ -3,6 +3,18 @@
   min-height: 100vh;
 }
 
+.text-red-faxtornet {
+  color: #dc3c4d;
+}
+
+.capitalized {
+  text-transform: capitalize;
+}
+
+.fill-yellow {
+  fill: #fbbc04;
+}
+
 .toast {
   position: fixed;
   bottom: 3%;
@@ -638,6 +650,73 @@ html {
     width: 50%;
   }
 }
+.recensioni-sect {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 10%;
+  gap: 5rem;
+  padding-top: 2%;
+}
+.recensioni-sect .trattino {
+  margin-inline: auto;
+}
+.recensioni-sect h1 {
+  font-size: 3rem;
+}
+
+.recensioni {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-content: center;
+  gap: 10%;
+}
+
+.recensione {
+  position: relative;
+  display: flex;
+  isolation: isolate;
+  flex-direction: column;
+  justify-content: start;
+}
+.recensione .stelle {
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 0.5em;
+}
+.recensione .recensione-testo {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  flex-grow: 1;
+}
+.recensione .autore {
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: flex-end;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.recensione::before {
+  content: open-quote;
+  position: absolute;
+  font-family: serif;
+  font-weight: 900;
+  color: #989595;
+  opacity: 0.3;
+  font-size: 15rem;
+  z-index: -1;
+}
+.recensione::after {
+  content: no-close-quote;
+}
+
+@media (max-width: 608px) {
+  .recensioni {
+    grid-template-columns: 1fr;
+  }
+}
 .info-page img {
   border-radius: 1.5625rem;
   max-width: 100%;
@@ -772,6 +851,7 @@ html {
   }
 }
 footer {
+  border-top: 1px solid black;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

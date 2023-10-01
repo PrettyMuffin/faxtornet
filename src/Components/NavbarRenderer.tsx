@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import MobileNavbar from "./MobileNavbar";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
-import { CurrentPageContext } from "../App";
+import { PageContext } from "../App";
 
 import logo from "../assets/images/Logo.png";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -10,7 +10,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 function NavbarRenderer() {
   const [currentWidth] = useState(window.innerWidth);
 
-  const { currentPage, setCurrentPage } = useContext(CurrentPageContext);
+  const { currentPage, setCurrentPage } = useContext(PageContext);
   const navigator = useNavigate();
 
   const location = useLocation();

@@ -1,6 +1,9 @@
 import HeaderLink from "../../HeaderLink";
 
 import assetWho from "../../../assets/images/filippo-desktop.jpg";
+import { useContext, useEffect, useState } from "react";
+import { PageContext } from "../../../App";
+import CountUp from "react-countup";
 
 function ChiSiamo() {
   return (
@@ -17,6 +20,7 @@ function ChiSiamo() {
 export default ChiSiamo;
 
 function Content() {
+  const { recensioniTotali } = useContext(PageContext);
   return (
     <section className="content">
       <div className="trattino"></div>
@@ -29,11 +33,26 @@ function Content() {
       </p>
       <section className="stats">
         <div>
-          <h1>250+</h1>
+          <h1>
+            <CountUp
+              className="text-red-faxtornet"
+              start={0}
+              useEasing={true}
+              end={recensioniTotali!}
+            />
+          </h1>
           <p>Ottime Recensioni</p>
         </div>
         <div>
-          <h1>100%</h1>
+          <h1>
+            <CountUp
+              className="text-red-faxtornet"
+              start={0}
+              useEasing={true}
+              end={100}
+            />
+            %
+          </h1>
           <p>Clienti Soddisfatti</p>
         </div>
       </section>

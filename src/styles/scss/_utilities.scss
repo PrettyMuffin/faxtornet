@@ -2,6 +2,18 @@
   min-height: 100vh;
 }
 
+.text-red-faxtornet {
+  color: $red-faxtornet;
+}
+
+.capitalized {
+  text-transform: capitalize;
+}
+
+.fill-yellow {
+  fill: $star-yellow;
+}
+
 .toast {
   position: fixed;
   bottom: 3%;

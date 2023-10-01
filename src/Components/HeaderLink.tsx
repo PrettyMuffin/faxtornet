@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
-import { CurrentPageContext } from "../App";
+import { PageContext } from "../App";
 
 function HeaderLink() {
-  const { currentPage, setCurrentPage } = useContext(CurrentPageContext);
+  const { currentPage, setCurrentPage } = useContext(PageContext);
 
   return (
     <header className="header-link">

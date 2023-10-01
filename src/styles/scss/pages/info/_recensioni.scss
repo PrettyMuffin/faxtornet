@@ -1,0 +1,69 @@
+.recensioni-sect {
+  background-color: $gray-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 10%;
+  gap: 5rem;
+  padding-top: 2%;
+  .trattino {
+    margin-inline: auto;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+.recensioni {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-content: center;
+  gap: 10%;
+}
+
+.recensione {
+  position: relative;
+  display: flex;
+  isolation: isolate;
+
+  flex-direction: column;
+  justify-content: start;
+  .stelle {
+    margin-bottom: 0.5rem;
+    display: flex;
+    gap: 0.5em;
+  }
+  .recensione-testo {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    flex-grow: 1;
+  }
+  .autore {
+    width: fit-content;
+    align-self: flex-end;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  // aggiungo il simbolo di quote
+  &::before {
+    content: open-quote;
+    position: absolute;
+    font-family: serif;
+    font-weight: 900;
+    color: $gray-text;
+    opacity: 0.3;
+    font-size: 15rem;
+    z-index: -1;
+  }
+  &::after {
+    content: no-close-quote;
+  }
+}
+
+@media (max-width: 608px) {
+  .recensioni {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import qr from "../../../assets/images/qr.png";
 
 import Carousel from "react-multi-carousel";
@@ -11,6 +11,8 @@ import ConfirmEmailToast from "./ConfirmEmailToast";
 import { ToastProp } from "../../../Models";
 
 import Email from "../../../smtp";
+import { PageContext } from "../../../App";
+import CountUp from "react-countup";
 
 function ChiSiamo() {
   const [toastConfirm, setToastConfirm] = useState<ToastProp>({
@@ -67,6 +69,7 @@ function ChiSiamo() {
   }
 
   useEffect(() => {
+    // dopo 2 secondi che il toast di conferma è stao mostrato viene di nuovo nascosto
     if (toastConfirm.canShow)
       setTimeout(() => {
         setToastConfirm({ ...toastConfirm, canShow: false });
@@ -74,7 +77,7 @@ function ChiSiamo() {
   }, [toastConfirm]);
 
   return (
-    <section className="chi-siamo-sect" id="chi-siamo">
+    <section className="page-section chi-siamo-sect" id="chi-siamo">
       <section className="content-wrapper">
         <Content />
         <Carousel itemClass="carosello-elemento" responsive={responsive}>
@@ -90,6 +93,8 @@ function ChiSiamo() {
     </section>
   );
 }
+
+export default ChiSiamo;
 
 interface ContattoFormProp {
   sendEmail(e: React.FormEvent<HTMLFormElement>): void;
@@ -150,9 +155,8 @@ function ContattoForm({ sendEmail }: ContattoFormProp) {
   );
 }
 
-export default ChiSiamo;
-
 function Content() {
+  const { recensioniTotali } = useContext(PageContext);
   return (
     <section className="content">
       <div className="trattino"></div>
@@ -169,11 +173,26 @@ function Content() {
       </p>
       <section className="stats">
         <div>
-          <h1>250+</h1>
+          <h1>
+            <CountUp
+              className="text-red-faxtornet"
+              start={0}
+              useEasing={true}
+              end={recensioniTotali!}
+            />
+          </h1>
           <p>Ottime Recensioni</p>
         </div>
         <div>
-          <h1>100%</h1>
+          <h1>
+            <CountUp
+              className="text-red-faxtornet"
+              start={0}
+              useEasing={true}
+              end={100}
+            />
+            %
+          </h1>
           <p>Clienti Soddisfatti</p>
         </div>
       </section>

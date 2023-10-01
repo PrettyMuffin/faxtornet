@@ -4,7 +4,7 @@ import { BiLogoFacebook, BiLogoInstagram } from "react-icons/bi";
 import { SiGooglemaps } from "react-icons/si";
 
 //* Dipendenze
-import { CurrentPageContext } from "../App";
+import { PageContext } from "../App";
 import { ElementoNavigazione } from "../Models";
 import { homeLinks, infoLinks } from "../Data";
 
@@ -59,7 +59,7 @@ function Logo() {
 }
 
 function Navigazione() {
-  const { currentPage } = useContext(CurrentPageContext);
+  const { currentPage } = useContext(PageContext);
 
   const elementiNavigazione: ElementoNavigazione[] =
     currentPage === "home" ? homeLinks : infoLinks;
