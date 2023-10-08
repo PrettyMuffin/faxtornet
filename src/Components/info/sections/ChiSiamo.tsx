@@ -10,8 +10,8 @@ function ChiSiamo() {
     <section id="info-chi-siamo" className="page-section chi-siamo">
       <HeaderLink />
       <div className="chi-siamo__content-wrapper">
-        <Content />
-        <img src={assetWho} alt="" />
+         <Content />
+       <img src={assetWho} alt="" />
       </div>
     </section>
   );

@@ -52,7 +52,7 @@ function ChiSiamo() {
       )}\n Ho visto il sito e sarei interessato/a ad una riparazione.\n Puoi contattarmi presso:\n - Email: ${data.get(
         "emailUser"
       )};\n - Cellulare: +39 ${data.get("cellUser")}`,
-    }).then((message: any) => {
+    }).then((message: unknown) => {
       if (message === "OK")
         setToastConfirm({
           canShow: true,

@@ -23,7 +23,6 @@ function Recensioni() {
 }
 
 export default Recensioni;
-
 function Recensione({ author_name, text }: Review) {
   return (
     <section className="recensione">
@@ -35,7 +34,6 @@ function Recensione({ author_name, text }: Review) {
         <BsStarFill size={"1.7rem"} className={"fill-yellow"} />
       </header>
       <section className="recensione-testo">
-        {/* <q>{text}</q> */}
         <p>{text}</p>
       </section>
       <p className="capitalized autore">- {author_name.toLowerCase()}</p>
