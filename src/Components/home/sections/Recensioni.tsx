@@ -10,7 +10,7 @@ function Recensioni() {
     <section className="page-section recensioni-sect" id="recensioni">
       <header>
         <div className="trattino"></div>
-        <h1>Perché le persone scelgono Faxtornet</h1>
+        <h1>La Voce dei Nostri Clienti: Recensioni su Google</h1>
       </header>
       <section className="recensioni">
         {recensioni &&

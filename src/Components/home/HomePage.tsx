@@ -2,6 +2,7 @@ import CaroselloOfferte from "./sections/CaroselloOfferte";
 import ChiSiamo from "./sections/ChiSiamo";
 import Presentazione from "./sections/Presentazione";
 import WhyNoi from "./sections/WhyNoi";
+import Recensioni from "./sections/Recensioni";
 
 type Props = {};
 
@@ -12,6 +13,7 @@ function HomePage({}: Props) {
       <ChiSiamo />
       <CaroselloOfferte />
       <WhyNoi />
+      <Recensioni />
     </main>
   );
 }

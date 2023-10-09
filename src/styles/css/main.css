@@ -716,6 +716,7 @@ html {
 @media (max-width: 608px) {
   .recensioni {
     grid-template-columns: 1fr;
+    padding-bottom: 2rem;
   }
 }
 .info-page img {
