@@ -6,7 +6,7 @@ export async function GetRecensioni() {
   // dev server
   // const data = await fetch('http://localhost:4000/api/reviews')
   // Production
-  const data = await fetch('http://faxtornet.it:4000/api/reviews')
+  const data = await fetch('https://faxtornet-api.netlify.app/reviews')
   if (!data.ok) console.error("Errore nella richiesta dei dati");
   const {
     reviews,
