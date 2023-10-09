@@ -3,12 +3,10 @@ import { Review } from "../Models";
 //const GOOGLE_API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
 export async function GetRecensioni() {
-  //const data = await fetch(
-    // heroku app, only in development server, when production, remove
-    //"https://cors-anywhere.herokuapp.com/" +
-   //   `https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJU1RsmiEkeUcR5yG23k0klJI&key=${GOOGLE_API_KEY}&reviews_sort=newest&language=it`
-  //);
-  const data = await fetch('/.netlify/function/api')
+  // dev server
+  // const data = await fetch('http://localhost:4000/api/reviews')
+  // Production
+  const data = await fetch('http://faxtornet.it:4000/api/reviews')
   if (!data.ok) console.error("Errore nella richiesta dei dati");
   const {
     reviews,
