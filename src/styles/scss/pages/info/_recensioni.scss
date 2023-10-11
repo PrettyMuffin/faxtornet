@@ -9,9 +9,20 @@
   .trattino {
     margin-inline: auto;
   }
-  h1 {
-    font-size: 3rem;
-    text-align: center;
+  .titolo-recensioni {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    height: min-content;
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+    }
+    img {
+      display: inline-block;
+      width: 20%;
+    }
   }
 }
 
@@ -60,6 +71,16 @@
   }
   &::after {
     content: no-close-quote;
+  }
+}
+
+@media (max-width: 426px) {
+  .recensioni-sect {
+    .titolo-recensioni {
+      img {
+        width: 30%;
+      }
+    }
   }
 }
 

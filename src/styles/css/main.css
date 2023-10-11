@@ -662,9 +662,21 @@ html {
 .recensioni-sect .trattino {
   margin-inline: auto;
 }
-.recensioni-sect h1 {
+.recensioni-sect .titolo-recensioni {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  height: -moz-min-content;
+  height: min-content;
+}
+.recensioni-sect .titolo-recensioni h1 {
   font-size: 3rem;
   text-align: center;
+}
+.recensioni-sect .titolo-recensioni img {
+  display: inline-block;
+  width: 20%;
 }
 
 .recensioni {
@@ -713,6 +725,11 @@ html {
   content: no-close-quote;
 }
 
+@media (max-width: 426px) {
+  .recensioni-sect .titolo-recensioni img {
+    width: 30%;
+  }
+}
 @media (max-width: 608px) {
   .recensioni {
     grid-template-columns: 1fr;

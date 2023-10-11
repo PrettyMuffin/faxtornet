@@ -3,14 +3,21 @@ import { PageContext } from "../../../App";
 import { BsStarFill } from "react-icons/bs";
 import { Review } from "../../../Models";
 
+import googleReviewLogo from "../../../assets/images/google reviews.png"
+
 function Recensioni() {
   const { recensioni } = useContext(PageContext);
 
+        // TODO: mettere immagine logo google reviews
+        //<h1>La Voce dei Nostri Clienti: Google</h1>
   return (
     <section className="page-section recensioni-sect" id="recensioni">
       <header>
         <div className="trattino"></div>
-        <h1>La Voce dei Nostri Clienti: Recensioni su Google</h1>
+        <div className="titolo-recensioni">
+          <h1>La Voce dei Nostri Clienti:</h1>
+          <img src={googleReviewLogo} alt="google review logo" />
+        </div>
       </header>
       <section className="recensioni">
         {recensioni &&
@@ -23,6 +30,7 @@ function Recensioni() {
 }
 
 export default Recensioni;
+
 function Recensione({ author_name, text }: Review) {
   return (
     <section className="recensione">
