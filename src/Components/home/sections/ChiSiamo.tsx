@@ -42,11 +42,14 @@ function ChiSiamo() {
   function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
+    console.log(data.get("emailUser")?.toString())
     Email.send({
-      SecureToken: "eca12333-d8d3-487c-8ada-7ec1a647917c",
-      To: "markobrunello2010@gmail.com",
-      From: "airpippo@gmail.com",
-      Subject: "Test",
+      SecureToken: "2b84bebf-bde0-4bf2-b77c-28ba2ae8f538",
+      //To: "markobrunello2010@gmail.com",
+      //From: "airpippo@gmail.com",
+      To: "airpippo@gmail.com",
+      From: data.get("emailUser")?.toString(),
+      Subject: "Prenotazione Riparazione",
       Body: `Ciao, sono ${data.get(
         "nomeUser"
       )}\n Ho visto il sito e sarei interessato/a ad una riparazione.\n Puoi contattarmi presso:\n - Email: ${data.get(
