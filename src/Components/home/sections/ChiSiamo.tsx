@@ -44,7 +44,7 @@ function ChiSiamo() {
     const data = new FormData(e.currentTarget);
     console.log(data.get("emailUser")?.toString())
     Email.send({
-      SecureToken: "2b84bebf-bde0-4bf2-b77c-28ba2ae8f538",
+      SecureToken: "dd37ca05-792d-49cf-acb3-1b846c999b05",
       //To: "markobrunello2010@gmail.com",
       //From: "airpippo@gmail.com",
       To: "airpippo@gmail.com",
