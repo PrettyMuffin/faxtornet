@@ -1,18 +1,18 @@
 import React, { useContext, useEffect, useState } from "react";
-import qr from "../../../assets/images/qr.png";
-
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-
-import userIcon from "../../../assets/images/user.png";
-import emailIcon from "../../../assets/images/email.png";
-import phoneIcon from "../../../assets/images/phoneLogo.png";
 import ConfirmEmailToast from "./ConfirmEmailToast";
+import Carousel from "react-multi-carousel";
 import { ToastProp } from "../../../Models";
-
 import Email from "../../../smtp";
 import { PageContext } from "../../../App";
 import CountUp from "react-countup";
+
+import "react-multi-carousel/lib/styles.css";
+
+import qr from "../../../assets/images/qr.png";
+import userIcon from "../../../assets/images/user.png";
+import emailIcon from "../../../assets/images/email.png";
+import phoneIcon from "../../../assets/images/phoneLogo.png";
+
 
 function ChiSiamo() {
   const [toastConfirm, setToastConfirm] = useState<ToastProp>({
@@ -47,8 +47,9 @@ function ChiSiamo() {
       SecureToken: "dd37ca05-792d-49cf-acb3-1b846c999b05",
       //To: "markobrunello2010@gmail.com",
       //From: "airpippo@gmail.com",
-      To: "airpippo@gmail.com",
-      From: data.get("emailUser")?.toString(),
+      To: "filippo@faxtornet.it",
+      //From: data.get("emailUser")?.toString(),
+      From: "airpippo@gmail.com",
       Subject: "Prenotazione Riparazione",
       Body: `Ciao, sono ${data.get(
         "nomeUser"
