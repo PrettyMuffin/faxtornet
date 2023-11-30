@@ -1,20 +1,20 @@
-import React, { useContext, useEffect, useState } from "react";
-import ConfirmEmailToast from "./ConfirmEmailToast";
-import Carousel from "react-multi-carousel";
-import { ToastProp } from "../../../Models";
-import Email from "../../../smtp";
+import { useContext } from "react";
+//import ConfirmEmailToast from "./ConfirmEmailToast";
+//import Carousel from "react-multi-carousel";
+//import { ToastProp } from "../../../Models";
+//import Email from "../../../smtp";
 import { PageContext } from "../../../App";
 import CountUp from "react-countup";
 
 import "react-multi-carousel/lib/styles.css";
 
 import qr from "../../../assets/images/qr.png";
-import userIcon from "../../../assets/images/user.png";
-import emailIcon from "../../../assets/images/email.png";
-import phoneIcon from "../../../assets/images/phoneLogo.png";
+//import userIcon from "../../../assets/images/user.png";
+//import emailIcon from "../../../assets/images/email.png";
+//import phoneIcon from "../../../assets/images/phoneLogo.png";
 
 function ChiSiamo() {
-  const [toastConfirm, setToastConfirm] = useState<ToastProp>({
+  /*const [toastConfirm, setToastConfirm] = useState<ToastProp>({
     canShow: false,
     text: "Email inviata correttamente",
     error: false,
@@ -80,7 +80,7 @@ function ChiSiamo() {
   }, [toastConfirm]);
 
   // Nel caso che magari Filippo voglia rimettere il form di contatto email
-  /*<Carousel itemClass="carosello-elemento" responsive={responsive}>
+  <Carousel itemClass="carosello-elemento" responsive={responsive}>
           <ContattoForm sendEmail={sendEmail} />
           <QrCodeCard />
         </Carousel>
@@ -102,7 +102,7 @@ function ChiSiamo() {
 
 export default ChiSiamo;
 
-interface ContattoFormProp {
+/*interface ContattoFormProp {
   sendEmail(e: React.FormEvent<HTMLFormElement>): void;
 }
 
@@ -159,7 +159,7 @@ function ContattoForm({ sendEmail }: ContattoFormProp) {
       </form>
     </section>
   );
-}
+}*/
 
 function Content() {
   const { recensioniTotali } = useContext(PageContext);
