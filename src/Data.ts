@@ -38,10 +38,6 @@ export const infoLinks: ElementoNavigazione[] = [
     idRef: "obbiettivi",
     displayString: "Obbiettivi",
   },
-  {
-    idRef: "recensioni",
-    displayString: "Recensioni",
-  },
 ];
 
 // Carosello - Home

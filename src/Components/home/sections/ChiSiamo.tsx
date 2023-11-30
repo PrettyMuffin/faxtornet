@@ -13,7 +13,6 @@ import userIcon from "../../../assets/images/user.png";
 import emailIcon from "../../../assets/images/email.png";
 import phoneIcon from "../../../assets/images/phoneLogo.png";
 
-
 function ChiSiamo() {
   const [toastConfirm, setToastConfirm] = useState<ToastProp>({
     canShow: false,
@@ -42,7 +41,7 @@ function ChiSiamo() {
   function sendEmail(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    console.log(data.get("emailUser")?.toString())
+    console.log(data.get("emailUser")?.toString());
     Email.send({
       SecureToken: "dd37ca05-792d-49cf-acb3-1b846c999b05",
       //To: "markobrunello2010@gmail.com",
@@ -80,11 +79,8 @@ function ChiSiamo() {
       }, 2000);
   }, [toastConfirm]);
 
-  return (
-    <section className="page-section chi-siamo-sect" id="chi-siamo">
-      <section className="content-wrapper">
-        <Content />
-        <Carousel itemClass="carosello-elemento" responsive={responsive}>
+  // Nel caso che magari Filippo voglia rimettere il form di contatto email
+  /*<Carousel itemClass="carosello-elemento" responsive={responsive}>
           <ContattoForm sendEmail={sendEmail} />
           <QrCodeCard />
         </Carousel>
@@ -93,6 +89,12 @@ function ChiSiamo() {
           canShow={toastConfirm.canShow}
           error={toastConfirm.error}
         />
+        */
+  return (
+    <section className="page-section chi-siamo-sect" id="chi-siamo">
+      <section className="content-wrapper">
+        <Content />
+        <QrCodeCard />
       </section>
     </section>
   );
