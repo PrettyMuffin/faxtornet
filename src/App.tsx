@@ -23,7 +23,6 @@ function App() {
     });
   }, []);
 
-
   const contextValue: ContestType = {
     currentPage,
     recensioni,

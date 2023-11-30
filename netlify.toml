@@ -1,2 +1,4 @@
-[build]
-functions = "netlify/function"
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
